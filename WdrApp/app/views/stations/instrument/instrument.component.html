@@ -1,0 +1,69 @@
+<mat-card style="width: 1000px; margin-left: 20px;">
+  <form (ngSubmit)="save()"> 
+    <div class="form-row">
+      <div class="input-group col-md-6 mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">Instrument Name</div>
+          </div>
+      <input type="text" class="form-control" placeholder="Enter element name" name="InstrumentName" [(ngModel)]="instrument.InstrumentName">
+    </div>
+      <div class="input-group col-md-6 mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">Instrument code</div>
+          </div>
+      <input type="text" class="form-control" placeholder="Enter code" name="InstrumentCode" [(ngModel)]="instrument.InstrumentCode">
+    </div>
+    </div>
+
+    <div class="form-row">
+      <div class="input-group col-md-6 mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">Manufacturer</div>
+          </div>
+      <input type="text" class="form-control" placeholder="Enter Manufacturer" name="Manufacturer" [(ngModel)]="instrument.Manufacturer">
+    </div>
+      <div class="input-group col-md-6 mb-3">
+          <div class="input-group-prepend">
+              <div class="input-group-text">Date Registered</div>
+            </div>
+        <input type="date" class="form-control" placeholder="Enter date registered" name="DateRegistered" [(ngModel)]="instrument.DateRegistered">
+      </div>
+    </div>
+
+    <div class="form-row">
+        <div class="input-group col-md-6 mb-3">
+          <div class="input-group-prepend">
+              <div class="input-group-text">Expiry date</div>
+            </div>
+        <input type="date" class="form-control" placeholder="Enter expiry date" name="ExpirationDate" [(ngModel)]="instrument.ExpirationDate">
+      </div>
+      <div class="input-group col-md-6 mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">Station Name</div>
+          </div>
+      <input type="text" class="form-control" placeholder="Enter station name" name="StationName" [(ngModel)]="instrument.StationName">
+    </div>
+    </div>
+
+    <div class="form-row">
+        <div class="input-group col-md-6 mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Station Number</div>
+              </div>
+          <input type="number" class="form-control" placeholder="Enter station number" name="StationNumber" [(ngModel)]="instrument.StationNumber">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="input-group col-md-6 mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Description</div>
+              </div>
+              <textarea name="description" id="" cols="30" rows="10" name="Description" [(ngModel)]="instrument.Description"></textarea>
+        </div>
+    </div>
+
+        <button class="btn btn-primary" type="submit">Save</button>
+        <button class="btn btn-danger" (click) ="back()"> Cancel</button>
+    </form>
+</mat-card>

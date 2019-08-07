@@ -1,0 +1,44 @@
+<mat-card>
+  <h3>Stations</h3>
+    <table class="table table-hover table-bordered table-responsive" style="overflow: auto">
+      <thead >
+           <tr>  
+              <th>No.</th>
+              <th>Station Name</th>
+              <th>Station Number</th>
+              <th>Station Reg No</th>
+              <th>Location</th>
+              <th>Indicator</th>
+              <th>Region</th>
+              <th>Country</th>
+              <th>Height</th>
+              <th>Latitude</th>
+              <th>Longitude</th>
+              <th>Altitude</th>
+              <th style="width: 40%;">Action</th>
+            </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let Station of stations">
+
+        <td>{{Station.station_id}}</td>
+        <td>{{Station.StationName}}</td>
+        <td>{{Station.StationNumber}}</td>
+        <td>{{Station.StationRegNumber}}</td>
+        <td>{{Station.Location}}</td>
+        <td>{{Station.Indicator}}</td>
+        <td>{{Station.StationRegion}}</td>
+        <td>{{Station.Country}}</td>
+        <td>{{Station.Height}}</td>
+        <td>{{Station.Latitude}}</td>
+        <td>{{Station.Longitude}}</td>
+        <td>{{Station.Altitude}}</td>
+        <td>
+          <button  class="btn btn-primary " (click)= "editStation(Station.station_id)">Edit</button><br>
+          <button  class="btn btn-danger " (click)= "deleteStation(Station.station_id)" style="margin-left: 50%; margin-top: -60px;">Delete</button>
+        </td>
+        
+      </tr>
+      </tbody>
+    </table>
+  </mat-card>

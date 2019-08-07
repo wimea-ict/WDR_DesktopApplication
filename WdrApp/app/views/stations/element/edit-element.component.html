@@ -1,0 +1,89 @@
+  <mat-card style="width: 1000px; margin-left: 20px;">
+    <form (ngSubmit)="updateElement()">
+      <div><strong> <h3>Element Edit Form : You can edit Element details here.</h3></strong></div> 
+      <div class="form-row">
+        <div class="input-group col-md-6 mb-3">
+          <div class="input-group-prepend">
+              <div class="input-group-text">Element Name</div>
+            </div>
+        <input type="text" name="ElementName" class="form-control" [(ngModel)]="element.ElementName">
+      </div>
+        <div class="input-group col-md-6 mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Station Name</div>
+              </div>
+          <input type="text" name="StationName" class="form-control" [(ngModel)]="element.StationName">
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="input-group col-md-6 mb-3">
+          <div class="input-group-prepend">
+              <div class="input-group-text">Station Number</div>
+            </div>
+        <input type="number" name="StationNumber" class="form-control" [(ngModel)]="element.StationNumber">
+      </div>
+        <div class="input-group col-md-6 mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Abbrev</div>
+              </div>
+          <input type="text" name="Abbrev" class="form-control" [(ngModel)]="element.Abbrev">
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="input-group col-md-6 mb-3">
+          <div class="input-group-prepend">
+              <div class="input-group-text">Type</div>
+            </div>
+        <input type="text" name="Type" class="form-control" [(ngModel)]="element.Type">
+      </div>
+        <div class="input-group col-md-6 mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Units</div>
+              </div>
+          <input type="text" name="Units" class="form-control" [(ngModel)]="element.Units">
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="input-group col-md-6 mb-3">
+          <div class="input-group-prepend">
+              <div class="input-group-text">Scale</div>
+            </div>
+        <input type="text" name="Scale" class="form-control" [(ngModel)]="element.Scale">
+      </div>
+      <div class="input-group col-md-6 mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">Instrument Name</div>
+        </div>
+        <select class="form-control" name="InstrumentName" [(ngModel)]="element.InstrumentName">
+            <option>--Select instrument used to measure the element--</option>
+            <option>Anenometer</option>
+            <option>Barometer</option>
+            <option>Rainfall Guage</option>
+          </select>
+      </div>
+      </div>
+
+      <div class="form-row">
+        <div class="input-group col-md-6 mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Limits</div>
+              </div>
+          <input type="text" name="Limits" class="form-control" [(ngModel)]="element.Limits">
+        </div>
+      </div>
+  
+      <div class="form-row">
+          <div class="input-group col-md-6 mb-3">
+              <div class="input-group-prepend">
+                  <div class="input-group-text">Description</div>
+                </div>
+            <textarea name="Description" cols="30" rows="10" [(ngModel)]="element.Description"></textarea>
+          </div>
+      </div>
+          <button class="btn btn-primary" type="submit">Update</button>
+          <button class="btn btn-danger" (click)="back()"> Cancel</button>
+      </form>
+  </mat-card>

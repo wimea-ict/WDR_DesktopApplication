@@ -1,0 +1,1134 @@
+<form> 
+    <div class="form-row">
+      <div class="input-group col-md-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">Station</div>
+        </div>
+        <select class="form-control" id="">
+            <option>Kampala</option>
+            <option></option>
+          </select>
+      </div>
+      <div class="input-group col-md-3">
+          <div class="input-group-prepend">
+              <div class="input-group-text">Station Number</div>
+            </div>
+        <input type="number" class="form-control">
+      </div>
+      <div class="input-group col-md-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">Select Month</div>
+          </div>
+      <input type="date" class="form-control">
+    </div>
+    <div class="input-group col-md-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">Select Year</div>
+          </div>
+      <input type="date" class="form-control">
+    </div>
+    </div>
+    </form>
+    <div style="margin-top: 10px; margin-left: -18px;">
+        <button class="btn btn-primary" style="margin-left: 20px;"> Generate Report</button>
+        <button class="btn btn-primary" style="margin-left: 20px;" printSectionId="contentToConvert" ngxPrint>Print</button>
+        <button class="btn btn-primary" style="margin-left: 20px;" (click)="export()">Export to excel</button>
+        <button class="btn btn-primary" style="margin-left: 20px;" (click)="exportcsv()">Export to csv</button>
+        <button class="btn btn-primary" style="margin-left: 20px;" (click)="exportpdf()">Export to pdf</button>
+    </div>
+<div>
+    <br />
+  <mat-card id="contentToConvert">
+    <table class="table table-responsive">
+      <h3>UGANDA NATIONAL METEOROLOGICAL AUTHORITY</h3>
+      <span><strong>FORM 10(REV 2003)&nbsp;&nbsp;&nbsp;(WEATHER SUMMARY FORM)</strong></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span><strong>STATION NO.</strong></span><span class="dotted-line"></span>
+      <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+      <span><strong>REG NO.</strong></span> <span class="dotted-line"></span>
+      <br>
+      <span><strong>STATION</strong></span> <span class="dotted-line"></span>
+      <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+      <span><strong>MONTH</strong></span> <span class="dotted-line"></span>
+      <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+      <span><strong>YEAR</strong></span> <span class="dotted-line"></span>
+        <br><br>
+      <div class="clearfix"></div>
+        <span>Reading of the selected parameters</span>
+
+                   <table id= "wsr" class="table table-bordered table-stripped table-responsive" style = "margin-top: 5px;">
+                       <tr class="font-weight-bolder">
+                           <td class="main" colspan="1"></td>
+                           <td class="main" colspan="3"></td>
+                           <td class="main" colspan="9">0600Z</td>
+                           <td class="main" colspan="9">1200Z</td>
+                           <td class="main" colspan="8">DAY WITH</td>
+                       </tr>
+
+                       <tr class="font-weight-bolder">
+                           <td class="main">Date</td>
+
+                           <td class="main">MAX<br>°C</td>
+                           <td class="main">MIN<br>°C</td>
+                           <td class="main">SUNSHINE</td>
+
+                           <td class="main">DB</td>
+                           <td class="main">WB</td>
+                           <td class="main">DP</td>
+                           <td class="main">VP</td>
+                           <td class="main">RH</td>
+                           <td class="main">CLP</td>
+                           <td class="main">GPM</td>
+                           <td class="main">WIND<br>DIR</td>
+                           <td class="main">FF</td>
+
+                           <td class="main">DB</td>
+                           <td class="main">WB</td>
+                           <td class="main">DP</td>
+                           <td class="main">VP</td>
+                           <td class="main">RH</td>
+                           <td class="main">CLP</td>
+                           <td class="main">GPM</td>
+                           <td class="main">WIND<br>DIR</td>
+                           <td class="main">FF</td>
+
+                           <td class="main">WIND<br>RUN</td>
+                           <td class="main">R/F</td>
+                           <td class="main">R/DAY</td>
+                           <td class="main">Ts</td>
+                           <td class="main">Fg</td>
+                           <td class="main">HZ</td>
+                           <td class="main">HAIL</td>
+                           <td class="main">EARTHQ</td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">1</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">2</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">3</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">4</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">5</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">6</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">7</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">8</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">9</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">10</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">11</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">12</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">13</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">14</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">15</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">16</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">17</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">18</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">19</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">20</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">21</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">22</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">23</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">24</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">25</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">26</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">27</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">28</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">29</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">30</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">TOTAL</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main" class="font-weight-bolder">MEAN</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+
+
+                     </table>
+               </table>
+               <span><strong>Report generated by:</strong></span><span class="dotted-line"></span>
+
+  </mat-card>
+</div>

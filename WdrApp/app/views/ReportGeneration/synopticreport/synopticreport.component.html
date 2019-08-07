@@ -1,0 +1,299 @@
+<form> 
+    <div class="form-row">
+      <div class="input-group col-md-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">Station</div>
+        </div>
+        <select class="form-control" id="">
+            <option>Kampala</option>
+            <option></option>
+          </select>
+      </div>
+      <div class="input-group col-md-3">
+          <div class="input-group-prepend">
+              <div class="input-group-text">Station Number</div>
+            </div>
+        <input type="number" class="form-control">
+      </div>
+      <div class="input-group col-md-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">Select Date</div>
+          </div>
+      <input type="date" class="form-control">
+    </div>
+    </div>
+    </form>
+    <div style="margin-top: 10px; margin-left: -18px;">
+        <button class="btn btn-primary" style="margin-left: 20px;"> Generate Report</button>
+        <button class="btn btn-primary" style="margin-left: 20px;" printSectionId="contentToConvert" ngxPrint>Print info on this page</button>
+        <button class="btn btn-primary" style="margin-left: 20px;" (click)="export()">Export to excel</button>
+        <button class="btn btn-primary" style="margin-left: 20px;" (click)="exportcsv()">Export to csv</button>
+        <button class="btn btn-primary" style="margin-left: 20px;" (click)="exportpdf()">Export to pdf</button>
+    </div>
+<div>
+    <br />
+  <mat-card id="contentToConvert">
+    <table class="table table-responsive">
+      <span><strong>FORM No.444(REV 9/94)</strong></span><br>
+      <span><strong>DAY</strong></span><span class="dotted-line"></span>
+      <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+      <span><strong>DATE</strong></span><span class="dotted-line"></span>
+      <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+      <span><strong>MONTH</strong></span> <span class="dotted-line"></span>
+      <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+      <span><strong>YEAR</strong></span> <span class="dotted-line"></span>
+        <br><br>
+      <div class="clearfix"></div>
+                   <table id= "wsr" class="table table-bordered table-stripped table-responsive" style = "margin-top: -10px;">
+                       <tr class="font-weight-bolder">
+                           <td class="main">Day</td>
+                           <td class="main">Time</td>
+                           <td class="main">Unit of Wind speed</td>
+                           <td class="main">Block Number</td>
+                           <td class="main">Station Number</td>
+                           <td class="main">Ind. or omission of precipation</td>
+                           <td class="main">Type of station/present or past weather</td>
+                           <td class="main">Height of lowest cloud</td>
+                           <td class="main">Horizontal visibility</td>
+                           <td class="main">Total cloud cover</td>
+                           <td class="main">Wind direction</td>
+                           <td class="main">Wind speed</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Sign of the data</td>
+                           <td class="main">Air Temperature</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Sign of the data</td>
+                           <td class="main">Dew point temperature</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Pressure at station level</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Standard isobaric surface</td>
+                           <td class="main">Geopotential of standard isobaric surface</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Amount of precipitation</td>
+                           <td class="main">Duration period of precipitation</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Present weather</td>
+                           <td class="main">Past weather</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Amount of clouds</td>
+                           <td class="main">Clouds of the general Sc. St. Cu, Cb</td>
+                           <td class="main">Clouds of the general Ac, As, Ns</td>
+                           <td class="main">Clouds of the general C, Cc, Cs</td>
+                           <td class="main">Station Indicator</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Grass Minimum Temperature</td>
+                           <td class="main">Character & Intensity of precipitation</td>
+                           <td class="main">Beginning or end of precipation</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Sign of the data</td>
+                           <td class="main">Maximum temperature</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Sign of the data</td>
+                           <td class="main">Minimum temperature</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Amount of evapouration</td>
+                           <td class="main">Indicator of type of instrumentation</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Duration of sunshine</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Sign of pressure change</td>
+                           <td class="main">Pressure of change in 24 hrs</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Amount of precipitation</td>
+                           <td class="main">Duration of period of precipation</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Amount of individual cloud layer</td>
+                           <td class="main">Genus of cloud</td>
+                           <td class="main">Height of base cloud layer or mass</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Amount of Individual cloud layer</td>
+                           <td class="main">Genus of cloud</td>
+                           <td class="main">Height of base cloud layer or mass</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Amount of Individual cloud layer</td>
+                           <td class="main">Genus of cloud</td>
+                           <td class="main">Height of base cloud layer or mass</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Amount of Individual cloud layer</td>
+                           <td class="main">Genus of cloud</td>
+                           <td class="main">Height of base cloud layer or mass</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Supplementary Information</td>
+                           <td class="main">Section Indicator</td>
+                           <td class="main">Group Indicator</td>
+                           <td class="main">Sign of data</td>
+                           <td class="main">Wet bulb temperature</td>
+                           <td class="main">RELATIVE HUMIDITY</td>
+                           <td class="main">VAPOUR PRESSURE</td>
+                       </tr>
+                       <tr class="font-weight-bolder">
+                        <td class="main">YY</td>
+                        <td class="main">GG</td>
+                        <td class="main">i</td>
+                        <td class="main">ii</td>
+                        <td class="main">iii</td>
+                        <td class="main">i</td>
+                        <td class="main">i</td>
+                        <td class="main">h</td>
+                        <td class="main">VV</td>
+                        <td class="main">N</td>
+                        <td class="main">dd</td>
+                        <td class="main">ff</td>
+                        <td class="main">1</td>
+                        <td class="main">S</td>
+                        <td class="main">TTT</td>
+                        <td class="main">2</td>
+                        <td class="main">S</td>
+                        <td class="main">TTT</td>
+                        <td class="main">3</td>
+                        <td class="main">PPPP</td>
+                        <td class="main">4</td>
+                        <td class="main">8</td>
+                        <td class="main">hhh</td>
+                        <td class="main">6</td>
+                        <td class="main">RRR</td>
+                        <td class="main">t</td>
+                        <td class="main">7</td>
+                        <td class="main">WW</td>
+                        <td class="main">W1W2</td>
+                        <td class="main">8</td>
+                        <td class="main">N</td>
+                        <td class="main">C</td>
+                        <td class="main">C</td>
+                        <td class="main">C</td>
+                        <td class="main">333</td>
+                        <td class="main">0</td>
+                        <td class="main">TT</td>
+                        <td class="main">R</td>
+                        <td class="main">R</td>
+                        <td class="main">1</td>
+                        <td class="main">S</td>
+                        <td class="main">TTT</td>
+                        <td class="main">2</td>
+                        <td class="main">S</td>
+                        <td class="main">TTT</td>
+                        <td class="main">5E</td>
+                        <td class="main">EE</td>
+                        <td class="main">E</td>
+                        <td class="main">55</td>
+                        <td class="main">SSS</td>
+                        <td class="main">5</td>
+                        <td class="main">8</td>
+                        <td class="main">PPP</td>
+                        <td class="main">6</td>
+                        <td class="main">RRR</td>
+                        <td class="main">t</td>
+                        <td class="main">8</td>
+                        <td class="main">N</td>
+                        <td class="main">C</td>
+                        <td class="main">hh</td>
+                        <td class="main">8</td>
+                        <td class="main">N</td>
+                        <td class="main">C</td>
+                        <td class="main">hh</td>
+                        <td class="main">8</td>
+                        <td class="main">N</td>
+                        <td class="main">C</td>
+                        <td class="main">hh</td>
+                        <td class="main">8</td>
+                        <td class="main">N</td>
+                        <td class="main">C</td>
+                        <td class="main">hh</td>
+                        <td class="main">9</td>
+                        <td class="main">SSS</td>
+                        <td class="main">555</td>
+                        <td class="main">1</td>
+                        <td class="main">S</td>
+                        <td class="main">TTT</td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                       <tr>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                     </table>
+               </table>
+               <span><strong>Report generated by:</strong></span><span class="dotted-line"></span>
+
+  </mat-card>
+</div>

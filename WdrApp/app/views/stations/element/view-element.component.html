@@ -1,0 +1,45 @@
+<div>
+    <button  class="btn btn-primary " (click)= "addElement()">+ Add Element</button> 
+</div>
+
+<mat-card style="margin-top: 5px;">
+  <h3>Elements</h3>
+    <table class="table table-hover table-bordered table-responsive" style="overflow: auto">
+      <thead >
+           <tr>  
+              <th>No.</th>
+              <th>Element Name</th>
+              <th>Instrument Name</th>
+              <th>Station Name</th>
+              <th>Station Number</th>
+              <th>Abbrev</th>
+              <th>Type</th>
+              <th>Units</th>
+              <th>Scale</th>
+              <th>Limits</th>
+              <th>Description</th>
+              <th style="width: 20%;">Action</th>
+            </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let element of elements">
+
+        <td>{{element.id}}</td>
+        <td>{{element.ElementName}}</td>
+        <td>{{element.InstrumentName}}</td>
+        <td>{{element.StationName}}</td>
+        <td>{{element.StationNumber}}</td>
+        <td>{{element.Abbrev}}</td>
+        <td>{{element.Type}}</td>
+        <td>{{element.Units}}</td>
+        <td>{{element.Scale}}</td>
+        <td>{{element.Limits}}</td>
+        <td>{{element.Description}}</td>
+        <td>
+          <button  class="btn btn-primary " (click)= "editElement(element.id)">Edit</button><br>
+          <button  class="btn btn-danger " (click)= "deleteElement(element.id)" style="margin-left: 29%; margin-top: -60px;">Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </mat-card>

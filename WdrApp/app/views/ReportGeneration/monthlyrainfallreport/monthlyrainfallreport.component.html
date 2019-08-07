@@ -1,0 +1,168 @@
+<form> 
+    <div class="form-row">
+      <div class="input-group col-md-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">Station</div>
+        </div>
+        <select class="form-control" id="">
+            <option>Kampala</option>
+            <option></option>
+          </select>
+      </div>
+      <div class="input-group col-md-3">
+          <div class="input-group-prepend">
+              <div class="input-group-text">Station Number</div>
+            </div>
+        <input type="number" class="form-control">
+      </div>
+      <div class="input-group col-md-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">Select Month</div>
+          </div>
+      <input type="date" class="form-control">
+    </div>
+      <div class="input-group col-md-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">Select Year</div>
+          </div>
+      <input type="date" class="form-control">
+    </div>
+    </div>
+    </form>
+    <div style="margin-top: 10px; margin-left: -18px;">
+        <button class="btn btn-primary" style="margin-left: 20px;"> Generate Report</button>
+        <button class="btn btn-primary" style="margin-left: 20px;" printSectionId="contentToConvert" ngxPrint>Print info on this page</button>
+        <button class="btn btn-primary" style="margin-left: 20px;" (click)="export()">Export to excel</button>
+        <button class="btn btn-primary" style="margin-left: 20px;" (click)="exportcsv()">Export to csv</button>
+        <button class="btn btn-primary" style="margin-left: 20px;" (click)="exportpdf()">Export to pdf</button>
+    </div>
+<div>
+    <br />
+  <mat-card id="contentToConvert">
+    <table class="table table-responsive">
+      <span><strong>FORM No.496(REV 10/2015)</strong></span><br>
+      <span style="text-align: center;">
+      <h3>UGANDA NATIONAL METEOROLOGICAL AUTHORITY</h3><br>
+      <h3>MONTHYLY RAINFALL REPORT</h3>
+      </span>
+      <span><strong>Region</strong></span><span class="dotted-line"></span>
+      <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+      <span><strong>District</strong></span><span class="dotted-line"></span>
+      <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+      <span><strong>Station Name</strong></span> <span class="dotted-line"></span>
+      <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+      <span><strong>Number</strong></span> <span class="dotted-line"></span>
+      <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+      <span><strong>Month</strong></span> <span class="dotted-line"></span><br>
+      <span><strong>Year</strong></span> <span class="dotted-line"></span>
+      <br><span class="font-weight-bolder">Enter daily totals under date measured</span>
+      <div class="clearfix"></div>
+                   <table id= "wsr" class="table table-bordered table-stripped table-responsive">
+                       <tr class="font-weight-bolder">
+                          <td class="main" colspan="4">2</td>
+                          <td class="main" colspan="4">3</td>
+                          <td class="main" colspan="4">4</td>
+                          <td class="main" colspan="4">5</td>
+                          <td class="main" colspan="4">6</td>
+                          <td class="main" colspan="4">7</td>
+                          <td class="main" colspan="4">8</td>
+                          <td class="main" colspan="4">9</td>
+                          <td class="main" colspan="4">10</td>
+                          <td class="main" colspan="4">11</td>
+                       </tr>
+                       <tr>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                       </tr>
+                       <tr class="font-weight-bolder">
+                        <td class="main" colspan="4">12</td>
+                        <td class="main" colspan="4">13</td>
+                        <td class="main" colspan="4">14</td>
+                        <td class="main" colspan="4">15</td>
+                        <td class="main" colspan="4">16</td>
+                        <td class="main" colspan="4">17</td>
+                        <td class="main" colspan="4">18</td>
+                        <td class="main" colspan="4">19</td>
+                        <td class="main" colspan="4">20</td>
+                        <td class="main" colspan="4">21</td>
+                       </tr>
+                       <tr>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                       </tr>
+                       <tr class="font-weight-bolder">
+                        <td class="main" colspan="4">22</td>
+                        <td class="main" colspan="4">23</td>
+                        <td class="main" colspan="4">24</td>
+                        <td class="main" colspan="4">25</td>
+                        <td class="main" colspan="4">26</td>
+                        <td class="main" colspan="4">27</td>
+                        <td class="main" colspan="4">28</td>
+                        <td class="main" colspan="4">29</td>
+                        <td class="main" colspan="4">30</td>
+                        <td class="main" colspan="4">31</td>
+                       </tr>
+                       <tr>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                        <td class="main" colspan="4"></td>
+                       </tr>
+                     </table>
+
+                     <table style="margin-top: -1.2em; margin-left: 41px;">
+                     <tr class="font-weight-bolder">
+                        <td class="main">1st of Following Month</td>
+                        <td class="main" colspan="2">Total</td>
+                        <td class="main" colspan="2">Days</td>
+                       </tr>
+                       <tr>
+                        <td class="main"></td>
+                        <td class="main" colspan="2"></td>
+                        <td class="main" colspan="2"></td>
+                       </tr>
+                      </table>
+
+                     
+               <br><span>Observations</span><span class="dotted-line"></span>
+               <br><span>To completed at the Meterological Department</span>
+                <table class="table table-bordered table-stripped table-responsive">
+                    <tr class="font-weight-bolder">
+                        <td class="main">AVERAGE</td>
+                        <td class="main">YEARS</td>
+                        <td class="main">MAX.FALL</td>
+                        <td class="main">DATE(S)</td>
+                       </tr>
+                       <tr>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                        <td class="main"></td>
+                       </tr>
+                </table>
+               <span><strong>Report Generated BY:</strong></span><span class="dotted-line"></span>
+               </table>
+  </mat-card>
+</div>

@@ -1,0 +1,36 @@
+<div>
+    <button  class="btn btn-primary " (click)= "addStation()">+ Add Instrument</button> 
+</div>
+
+<mat-card style="margin-top: 5px;">
+  <h3>Instruments</h3>
+    <table class="table table-hover table-bordered table-responsive" style="overflow: auto">
+      <thead >
+           <tr>  
+              <th>No.</th>
+              <th>Instrument Name</th>
+              <th>Station Name</th>
+              <th>Station Number</th>
+              <th>Instrument code</th>
+              <th>Manufacturer</th>
+              <th>Description</th>
+              <th>Date Registered</th>
+              <th>Expiry Date</th>
+            </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let instrument of instruments">
+
+        <td>{{instrument.id}}</td>
+        <td>{{instrument.InstrumentName}}</td>
+        <td>{{instrument.StationName}}</td>
+        <td>{{instrument.StationNumber}}</td>
+        <td>{{instrument.InstrumentCode}}</td>
+        <td>{{instrument.Manufacturer}}</td>
+        <td>{{instrument.Description}}</td>
+        <td>{{instrument.DateRegistered}}</td>
+        <td>{{instrument.ExpirationDate}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </mat-card>

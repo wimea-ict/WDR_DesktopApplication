@@ -1,0 +1,137 @@
+<mat-card style="width: 1000px; margin-left: 20px;">
+  <form (ngSubmit)="save()"> 
+    <div class="form-row">
+      <div class="input-group col-md-6 mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">Station Name</div>
+          </div>
+      <input type="text" name="StationName" class="form-control" placeholder="Enter station name" [(ngModel)]="station.StationName">
+    </div>
+      <div class="input-group col-md-6 mb-3">
+          <div class="input-group-prepend">
+              <div class="input-group-text">Longitude</div>
+            </div>
+        <input type="number" name="Longitude" class="form-control" placeholder="Enter longitude" [(ngModel)]="station.Longitude">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="input-group col-md-6 mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">Station Number</div>
+          </div>
+      <input type="text" name="StationNumber" class="form-control" placeholder="Enter station number" [(ngModel)]="station.StationNumber">
+    </div>
+      <div class="input-group col-md-6 mb-3">
+          <div class="input-group-prepend">
+              <div class="input-group-text">Height</div>
+            </div>
+        <input type="number" name="Height" class="form-control" placeholder="Enter height" [(ngModel)]="station.Height">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="input-group col-md-6 mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">Station Registration Number</div>
+          </div>
+      <input type="text" name="StationRegNumber" class="form-control" placeholder="Enter station registration number" [(ngModel)]="station.StationRegNumber">
+    </div>
+      <div class="input-group col-md-6 mb-3">
+          <div class="input-group-prepend">
+              <div class="input-group-text">Ft A.M.S.L(Altitude)</div>
+            </div>
+        <input type="number" name="Altitude" class="form-control" placeholder="Enter altitude" [(ngModel)]="station.Altitude">
+      </div>
+    </div>
+
+    <div class="form-row">
+        <div class="input-group col-md-6 mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Location</div>
+              </div>
+          <input type="text" name="Location" class="form-control" placeholder="Enter location" [(ngModel)]="station.Location">
+        </div>
+      <div class="input-group col-md-6 mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">Status of Station</div>
+        </div>
+        <select name="StationStatus" class="form-control" id="" [(ngModel)]="station.StationStatus">
+            <option value="">--Select status of station--</option>
+            <option value="on">Active</option>
+            <option value="off">Inactive</option>
+          </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+        <div class="input-group col-md-6 mb-3">
+          <div class="input-group-prepend">
+              <div class="input-group-text">Indicator</div>
+            </div>
+        <input type="text" name="Indicator" class="form-control" placeholder="Enter station indicator" [(ngModel)]="station.Indicator">
+      </div>
+        <div class="input-group col-md-6 mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Opened</div>
+              </div>
+          <input type="datetime-local" name="Opened" class="form-control" placeholder="Enter opened date" [(ngModel)]="station.Opened">
+        </div>
+      </div>
+
+      <div class="form-row">
+          <div class="input-group col-md-6 mb-3">
+              <div class="input-group-prepend">
+                  <div class="input-group-text">Region</div>
+              </div>
+              <select name="StationRegion" class="form-control" id="" [(ngModel)]="station.StationRegion">
+                  <option value="">--Select region--</option>
+                  <option value="Central">Central</option>
+                  <option value="Northern">Northern</option>
+                  <option value="Southern">Southern</option>
+                  <option value="Western">Western</option>
+                  <option value="Eastern">Eastern</option>
+                </select>
+            </div>
+          <div class="input-group col-md-6 mb-3">
+              <div class="input-group-prepend">
+                  <div class="input-group-text">Closed</div>
+                </div>
+            <input type="date" name="Closed" class="form-control" placeholder="Enter closed date" [(ngModel)]="station.Closed">
+          </div>
+      </div>
+
+      <div class="form-row">
+          <div class="input-group col-md-6 mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Country</div>
+              </div>
+          <input type="text" name="Country" class="form-control" readonly [(ngModel)]="station.Country">
+        </div>
+        <div class="input-group col-md-6 mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Type of station</div>
+            </div>
+            <select name="StationType" class="form-control" id="" [(ngModel)]="station.StationType">
+                <option value="">--Select Type of station--</option>
+                <option value="Synoptic">Synoptic</option>
+                <option value="Agrometeorological">Agrometeorological</option>
+                <option value="Rainfall">Rainfall</option>
+                <option value="Hydrometeorological">Hydrometeorological</option>
+                <option value="Climatological">Climatological</option>
+              </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+            <div class="input-group col-md-6 mb-3">
+              <div class="input-group-prepend">
+                  <div class="input-group-text">Latitude</div>
+                </div>
+            <input type="number" name="Latitude" class="form-control" placeholder="Enter Latitude" [(ngModel)]="station.Latitude">
+          </div>
+          </div>
+        <button class="btn btn-primary" type="submit">Save</button>
+        <button class="btn btn-danger" (click)="back()"> Cancel</button>
+    </form>
+</mat-card>

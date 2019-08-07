@@ -1,0 +1,23 @@
+<mat-card>
+    <div><strong>WDR USER INFORMATION</strong></div>
+    <form class="form-horizontal" (submit)="backToViewUsers()">
+      <div>
+          <label>User's Name:</label>
+            <span> {{User.name}}</span>
+      </div>
+      <div>
+          <label>User's Name:</label>
+            <span> {{User.username}}</span>
+      </div>
+      <div>
+          <label>User's Email:</label>
+            <span> {{User.email}}</span>
+      </div>
+      <div class="form-group">
+          <div style="margin-top: 10px;">
+            <button type="submit"  class="btn btn-danger" (click)="backToViewUsers()">Cancel</button>
+            <button class="btn btn-info" (click)="edit(User.id)">Edit profile</button>
+          </div>
+        </div>
+    </form>
+  </mat-card>
