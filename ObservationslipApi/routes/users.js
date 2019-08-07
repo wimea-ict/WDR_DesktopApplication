@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/User');
-var bcrypt = require('bcrypt');
+var bcrypt = require('bcryptjs');
 
 const saltRounds = 10;
 // user authentication
