@@ -1,0 +1,47 @@
+
+<div class="container">
+    <div class="col-lg-8">
+    <mat-card style="margin-left: 20%"  >
+  <form (ngSubmit)="addArchiverainfall()" >
+      <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Select Date</span>
+          </div>
+            <input type="date" name="Date" [(ngModel)]="archive.Date" required class="form-control"   >
+        </div>
+      <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Station</span>
+          </div>
+            <select type="text"  name="station" [(ngModel)]="archive.station" required class="form-control"  >
+              <option>select station</option>
+              <option value="Kampala"> Kampala</option>
+              <!-- <option value="Entebbe">Entebbe</option> -->
+            </select>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Station Number</span>
+          </div>
+            <input type="text" required class="form-control" name="StationNumber" [(ngModel)]="archive.StationNumber">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">RAINFALL</span>
+            </div>
+              <input type="number" required class="form-control" name="Rainfall" [(ngModel)]="archive.Rainfall"  placeholder="Enter MAX" >
+          </div>
+          <div class="input-group" >
+            <span class="btn btn-danger" (click) ="back()">
+                <i class ="fa fa-arrow-left"></i>
+                BACK
+            </span> 
+              <button  type="submit" class="btn btn-primary" style=" margin-left:50% ;">
+                <i class="fa fa-plus"></i>
+                SUBMIT</button>
+         </div>
+  </form>
+ 
+  </mat-card>
+  </div>
+  </div> 

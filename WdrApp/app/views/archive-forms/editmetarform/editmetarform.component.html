@@ -1,0 +1,253 @@
+<div class="container">
+  <div class="row">
+    <mat-card style="margin-left: 12%; margin-bottom: 5%;">
+      <form (ngSubmit)="updatemetarform()">
+        <table class="table table-bordered table-stripped" >
+  <tr>
+      <td colspan = "4">
+          <div class="input-group " >
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Select Date</span>
+            </div>
+              <input type="date" name="Date" [(ngModel)]="metar.Date" required class="form-control" placeholder="Enter select date">
+            
+          </div>
+      </td>
+  
+    <td colspan = "4">
+        <div class="input-group ">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id ="basic-addon1">W<sup>1</sup>W<sup>1</sup></span>
+          </div>
+            <input type="text"  name="W1W1" [(ngModel)]="metar.W1W1"  required class="form-control"  placeholder="Enter W1W1">
+          
+    </div>
+    </td>
+          </tr>
+          <tr>
+            <td colspan = "4" >
+                <div class="input-group " >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Station Name</span>
+                  </div>
+                    <input type="text" name="station" [(ngModel)]="metar.station" required class="form-control" value="Kampala" class="form-control" >
+                  
+                </div>
+            </td>
+  
+  <td colspan = "4">
+    <div class="input-group ">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id ="basic-addon1"> N1CCh1NnCChhhNhCChhh</span>
+      </div>
+        <input type="text" name="NlCCNmCCNhCC" [(ngModel)]="metar.NlCCNmCCNhCC"  required class="form-control" placeholder="Enter the N1CCh1NnCChhhNhCChhh" >
+      
+    </div>
+      </td>
+      </tr>
+      <tr>
+        <td colspan = "4">
+            <div class="input-group " >
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Station Number</span>
+              </div>
+                <input type="text"  name="stationnumber" required class="form-control compulsory" value="11223"  readonly >
+              
+            </div>
+        </td>
+  
+  <td colspan = "4">
+      <div class="input-group ">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id ="basic-addon1">TT/T<sub>d</sub>T<sub>d</sub></span>
+        </div>
+          <input type="text" name="TTTdTd" [(ngModel)]="metar.TTTdTd" required class="form-control" placeholder="Enter the TT/TdTd" >
+        
+    </div>
+        </td>
+        </tr>
+        <tr>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">TIME</span>
+                </div>
+                <select class="form-control compulsory" name="TIME" [(ngModel)]="metar.TIME">
+                  <option>--select TIME options--</option>
+                    <option value="00:00Z">00:00Z</option>
+                    <option value="00:30Z">00:30Z</option>
+                    <option value="01:00Z">01:00Z</option>
+                    <option value="01:30Z">01:30Z</option>
+                    <option value="02:00Z">02:00Z</option>
+                    <option value="02:30Z">02:30Z</option>
+                    <option value="03:00Z">03:00Z</option>
+                    <option value="03:30Z">03:30Z</option>
+                    <option value="04:00Z">04:00Z</option>
+                    <option value="04:30Z">04:30Z</option>
+                    <option value="05:00Z">05:00Z</option>
+                    <option value="05:30Z">05:30Z</option>
+                    <option value="06:00Z">06:00Z</option>
+                    <option value="06:30Z">06:30Z</option>
+                    <option value="07:00Z">07:00Z</option>
+                    <option value="07:30Z">07:30Z</option>
+                    <option value="08:00Z">08:00Z</option>
+                    <option value="08:30Z">08:30Z</option>
+                    <option value="09:00Z">09:00Z</option>
+                    <option value="09:30Z">09:30Z</option>
+                    <option value="10:00Z">10:00Z</option>
+                    <option value="10:30Z">10:30Z</option>
+                    <option value="11:00Z">11:00Z</option>
+                    <option value="11:30Z">11:30Z</option>
+                    <option value="12:00Z">12:00Z</option>
+                    <option value="12:30Z">12:30Z</option>
+                    <option value="13:00Z">13:00Z</option>
+                    <option value="13:30Z">13:30Z</option>
+                    <option value="14:00Z">14:00Z</option>
+                    <option value="14:30Z">14:30Z</option>
+                    <option value="15:00Z">15:00Z</option>
+                    <option value="15:30Z">15:30Z</option>
+                    <option value="16:00Z">16:00Z</option>
+                    <option value="16:30Z">16:30Z</option>
+                    <option value="17:00Z">17:00Z</option>
+                    <option value="17:30Z">17:30Z</option>
+                    <option value="18:00Z">18:00Z</option>
+                    <option value="18:30Z">18:30Z</option>
+                    <option value="19:00Z">19:00Z</option>
+                    <option value="19:30Z">19:30Z</option>
+                    <option value="20:00Z">20:00Z</option>
+                    <option value="20:30Z">20:30Z</option>
+                    <option value="21:00Z">21:00Z</option>
+                    <option value="21:30Z">21:30Z</option>
+                    <option value="22:00Z">22:00Z</option>
+                    <option value="22:30Z">22:30Z</option>
+                    <option value="23:00Z">23:00Z</option>
+                    <option value="23:30Z">23:30Z</option>
+                  </select>
+                
+              </div>
+          </td>
+  
+  <td colspan = "4">
+      <div class="input-group ">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id ="basic-addon1"> QNH(hpa)</span>
+        </div>
+          <input type="text" name="Qnhhpa" [(ngModel)]="metar.Qnhhpa" required class="form-control" placeholder="Enter the QNH(hpa)" >
+        
+      </div>
+        </td>
+        </tr>
+        <tr>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">METAR/SPECI</span>
+                </div>
+                <select class="form-control compulsory" [(ngModel)]="metar.METARSPECI" name="METARSPECI">
+                  <option>--select Options METAR/SPECI </option>
+                  <option value="METAR"> METAR</option>
+                  <option value="SPECI"> SPECI</option>
+                  </select>
+                
+              </div>
+          </td>
+      
+          <td colspan = "4">
+          <div class="input-group ">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id ="basic-addon1">QNH(in) </span>
+            </div>
+              <input type="text" name="Qnhin" [(ngModel)]="metar.Qnhin"  required class="form-control" placeholder="Enter the QNH(in)">
+            
+          </div>
+            </td>
+            </tr>
+            <tr>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">CCCC</span>
+                    </div>
+                      <input type="text" name="CCCC" [(ngModel)]="metar.CCCC" required class="form-control" placeholder="CCCC" >
+                    
+                  </div>
+              </td>
+  
+    <td colspan = "4">
+    <div class="input-group ">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id ="basic-addon1">QFE(hpa)</span>
+      </div>
+        <input type="text" name="Qfehpa" [(ngModel)]="metar.Qfehpa"  required class="form-control" placeholder="Enter QFE(hpa)" >
+      
+    </div>
+      </td>
+      </tr>
+      <tr>
+        <td colspan = "4">
+            <div class="input-group " >
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">YYGGgg<sup>z</sup></span>
+              </div>
+                <input type="text" name="YYGGgg" [(ngModel)]="metar.YYGGgg" required class="form-control" placeholder="Enter the YYGGgg">
+              
+            </div>
+        </td>
+  
+          <td colspan = "4">
+              <div class="input-group ">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id ="basic-addon1">QFE(in) </span>
+                </div>
+                  <input type="text" name="Qfein" [(ngModel)]="metar.Qfein"  required class="form-control" placeholder="Enter QFE(in)">
+                
+            </div>
+          </td>
+        </tr>
+        <tr>
+        <td colspan = "4">
+            <div class="input-group " >
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Dddff/f<sub>m</sub>f<sub>m</sub></span>
+              </div>
+                <input type="text" name="Dddfffmfm" [(ngModel)]="metar.Dddfffmfm" required class="form-control" placeholder="Enter the Dddff/fm/fm">
+              
+            </div>
+        </td>
+  
+          <td colspan = "4">
+              <div class="input-group ">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id ="basic-addon1">RE W<sup>1</sup>W<sup>1</sup> </span>
+                </div>
+                  <input type="text" name="REW1W1" [(ngModel)]="metar.REW1W1"   required class="form-control" placeholder="Enter RE W1W1">
+                
+            </div>
+          </td>
+        </tr>
+        <td colspan = "10">
+            <div class="input-group ">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id ="basic-addon1">VVVV or CAVOK</span>
+              </div>
+                <input type="text" name="WWorCAVOK" [(ngModel)]="metar.WWorCAVOK"  required class="form-control" placeholder="Enter VVVV or CAVOK">
+              
+          </div>
+        </td>
+  </table>
+
+  <div class="input-group" >
+      <span class="btn btn-danger" (click)="back()">
+          <i class ="fa fa-times"></i>
+          CANCEL
+      </span> 
+        <button  class="btn btn-primary" style=" margin-left:50% ;">
+          <i class="fa fa-plus"></i>
+          UPDATE Metar Form</button>
+   </div>
+      </form>
+      <br />
+      
+    </mat-card>
+  </div>
+  </div>

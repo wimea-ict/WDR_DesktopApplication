@@ -1,0 +1,68 @@
+
+<div class="container" style="margin-left: 12%;  margin-bottom: 10%;">
+  <div class=" col-lg-8">
+    <mat-card>
+  <form (ngSubmit)="addscannedAnnualRainfall()">
+  
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Form</span>
+    </div>
+      <input type="text" class="form-control" aria-label="form" name="Form_scanned" [(ngModel)]="scannedannualrainfall.Form_scanned" aria-describedby="basic-addon1" value="Annual Rainfall Form" readonly= "readonly" required>
+  </div>
+  
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Station</span>
+    </div>
+      <select type="text"   required class="form-control" placeholder="select station" name="station" [(ngModel)]="scannedannualrainfall.station">
+        <option>select station</option>
+        <option value="Kampala">Kampala</option>
+      </select>
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Station Number</span>
+    </div>
+      <input type="text" required class="form-control"  value="112233" readonly  placeholder="111223">
+  </div>
+  
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Year</span>
+    </div>
+      <input type="number" required class="form-control" placeholder="select Year" name="year" [(ngModel)]="scannedannualrainfall.year">
+           
+  </div>
+  <div class="form-group">
+      <span class="input-group-text" id="basic-addon1">Description</span>
+      <textarea type="text"  class="form-control" name="Description" [(ngModel)]="scannedannualrainfall.Description"></textarea>
+           
+  </div>
+  <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Select file to upload</span>
+      <div>
+        <input type="file" name="photo" ng2FileSelect [uploader]="uploader" name="FileRef" [(ngModel)]="scannedannualrainfall.FileRef"/>
+    
+        <button type="button" class="btn btn-success btn-s" 
+          (click)="uploader.uploadAll()" 
+          [disabled]="!uploader.getNotUploadedItems().length" >
+              Upload an Image
+        </button>
+      </div>     
+  </div>
+  <br />
+  <div class="input-group mb-3" >
+      <span class="btn btn-danger" (click) ="back()">
+          <i class ="fa fa-arrow-left"></i>
+          BACK
+        </span> 
+        <button type="submit" class="btn btn-success" style=" margin-left:70% ;">
+          <i class="fa fa-plus"></i>
+          SUBMIT</button>
+   </div>
+  
+  </form>
+  </mat-card>
+  </div>
+  </div>

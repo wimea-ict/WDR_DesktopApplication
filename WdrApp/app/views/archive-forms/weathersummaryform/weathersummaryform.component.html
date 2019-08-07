@@ -1,0 +1,80 @@
+<section class="content-header" style="margin-left: 2%">
+    <ol class="">
+        <h3  class="active text-primary" >Archive Weather Summary Form Report Data
+           <small>page</small>
+           <button class="btn btn-primary" (click)="weather()" style="margin-left: 2%">
+              <i class="fa fa-plus"></i>
+                Add Archive Weather Summary Form
+              </button>
+              <button class="btn btn-primary"><i class="fa fa-print"></i> PRINT</button>
+        </h3>
+    </ol>
+  </section>
+      <div class="tab" style="margin-left: 5%">
+          <div class="mat-elevation-z8" >
+            <mat-card style="margin-bottom: 5%;">
+              <div>
+                <div class="box-header">
+                   <h3>Weather Summary info:</h3>
+                 </div>
+                 <div class="table-hover table-responsive">
+                    <table id="example1" class="table table-bordered" style="overflow: auto">
+                      <thead class="thead-dark">
+                        <tr>
+                            <th>No.</th>
+                            <th>Date</th>
+                            <th>Station </th>
+                            <th>Station No</th>
+                            <th>Max</th>
+                            <th>Min</th>
+                            <th>Sunshine</th>
+                            <th>DB</th>
+                            <th>WB</th>
+                            <th>DP</th>
+                            <th>VP</th>
+                            <th>RH</th>
+                            <th>CLP</th>
+                            <th>GPM</th>
+                            <th>Wind dir</th>
+                            <th>FF</th>
+                            <th>Wind Run</th>
+                            <th>R_F</th>  
+                          <th *ngIf="authority === 'Data Officer' || authority === 'Senior Data Officer'">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody> 
+                          <tr *ngFor="let weather of archiveweather | paginate: { itemsPerPage: count, currentPage: p }">
+                              <td>{{weather.id}}</td>
+                              <td>{{weather.Date | slice:0:10}}</td>
+                              <td>{{weather.station}}</td>
+                              <td>11223</td>
+                              <td>{{weather.TEMP_MAX}}</td>
+                              <td>{{weather.TEMP_MIN}}</td>
+                              <td>{{weather.SUNSHINE}}</td>
+                              <td>{{weather.DB_0600Z}}</td>
+                              <td>{{weather.WB_0600Z}}</td>
+                              <td>{{weather.DP_0600Z}}</td>
+                              <td>{{weather.VP_0600Z}}</td>
+                              <td>{{weather.RH_0600Z}}</td>
+                              <td>{{weather.CLP_0600Z}}</td>
+                              <td>{{weather.GPM_0600Z}}</td>
+                              <td>{{weather.WIND_DIR_0600Z}}</td>
+                              <td>{{weather.FF_0600Z}}</td>
+                              <td>{{weather.WIND_RUN}}</td>
+                              <td>{{weather.R_F}}</td>
+                              <td *ngIf="authority === 'Data Officer' || authority === 'Senior Data Officer'">
+                                <button  type="button" class="btn btn-primary" name="button" (click)= "editweather(weather.id)" ><i class="fa fa-edit"></i>Edit</button>
+                              </td>
+                             </tr>
+                      </tbody>
+                    </table> 
+                 </div>
+                 <div class="text-right">
+                  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </div>
+              </div>
+              </mat-card>
+              </div>
+        </div>
+  
+  

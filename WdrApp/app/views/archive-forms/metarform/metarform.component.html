@@ -1,0 +1,78 @@
+<section class="content-header" style="margin-left: 2%">
+    <ol class="">
+        <h3  class="active text-primary" >Archive Metar  Form 
+           <small>page</small>
+           <button class="btn btn-primary no-print" (click)="metar()" style="margin-left: 4%">
+              <i class="fa fa-plus"></i>
+                Add new Archive Metar Form
+              </button>
+              <button onClick="print();" class="btn btn-primary no-print" style="margin-left: 3%"><i class="fa fa-print"></i> PRINT</button>
+        </h3>
+    </ol>
+  </section>
+      <div class="tab" style="margin-left: 5%">
+          <div class="mat-elevation-z8">
+            <mat-card style="margin-bottom: 5%;">
+              <div>
+                <div class="box-header">
+                   <h3>Metar info:</h3>
+                 </div>
+                 <div class=" table-hover table-responsive">
+                    <table id="example1" class="table table-bordered" style="overflow: auto">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th>No.</th>
+                          <th>Date</th>
+                          <th>Station</th>
+                          <th>Station No</th>
+                          <th>Metar/Speci</th>
+                          <th>CCCC</th>
+                          <th>YYGGgg</th>
+                          <th>Dddff/ fm/fm</th>
+                          <th>WW or CAVOK</th>
+                          <th>W1W1</th>
+                          <th>NCC</th>
+                          <th>TT/TdTd</th>
+                          <th>QNH (hpa)</th>
+                          <th>QNH (in)</th>
+                          <th>QFE (hpa)</th>
+                          <th>RE W1W1</th>  
+                          <th *ngIf="authority === 'Data Officer' || authority === 'Senior Data Officer'">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let metar of archivemetar | paginate: { itemsPerPage: count, currentPage: p }">
+                          <td>{{metar.id}}</td>
+                          <td>{{metar.Date | slice:0:10}}</td>
+                          <td>{{metar.station}}</td>
+                          <td>11223</td>
+                          <td>{{metar.METARSPECI}}</td>
+                          <td>{{metar.CCCC}}</td>
+                          <td>{{metar.YYGGgg}}</td>
+                          <td>{{metar.Dddfffmfm}}</td>
+                          <td>{{metar.WWorCAVOK}}</td>
+                          <td>{{metar.W1W1}}</td>
+                          <td>{{metar.NlCCNmCCNhCC}}</td>
+                          <td>{{metar.TTTdTd}}</td>
+                          <td>{{metar.Qnhhpa}}</td>
+                          <td>{{metar.Qnhin}}</td>
+                          <td>{{metar.Qfehpa}}</td>
+                          <td>{{metar.REW1W1}}</td>
+                          <td *ngIf="authority === 'Data Officer' || authority === 'Senior Data Officer'">
+                            <button  type="button" class="btn btn-primary" name="button" (click)= "editmetar(metar.id)" ><i class="fa fa-edit"></i>Edit</button>
+                          </td>
+                         </tr>
+                      </tbody>
+  
+                    </table>
+                    
+                 </div>
+                 <div class="text-right">
+                  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </div>
+              </div>
+              </mat-card>
+              </div>
+        </div>
+  
+  

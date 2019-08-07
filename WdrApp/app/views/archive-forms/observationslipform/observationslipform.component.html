@@ -1,0 +1,75 @@
+<section class="content-header" style="margin-left: 2%">
+    <ol class="">
+        <h3  class="active text-primary" >Archive Observation Slip Form 
+           <small>page</small>
+           <button class="btn btn-primary " (click)="observation()" style="margin-left: 4%">
+              <i class="fa fa-plus"></i>
+                Add new Archive Observation Slip
+              </button>
+              <button class="btn btn-primary " style="margin-left: 3%"><i class="fa fa-print"></i> PRINT</button>
+        </h3>
+    </ol>
+  </section>
+
+      <div class="tab" style="margin-left: 5%">
+          <div class="mat-elevation-z8" >
+            <mat-card style="margin-bottom: 5%;">
+              <div >
+                <div class="box-header">
+                   <h3>Observation slip info:</h3>
+                 </div>
+                 <div class="table-hover table-responsive">
+                    <table id="example1" class="table table-bordered" style="overflow: auto">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th>No.</th>
+                          <th>Date</th>
+                          <th>Station</th>
+                          <th>Station No</th>
+                          <th>TIME</th>
+                          <th>Dry Bulb</th>
+                          <th>Wet Bulb</th>
+                          <th>Present Weather</th>
+                          <th>Visibility</th>
+                          <th>Wind Direction</th>
+                          <th>Wind Speed</th>
+                          <th>Rainfall (mm)</th>
+                          <th>Gusting</th>
+                          <th>Max Read</th>
+                          <th>Min Read</th>
+                          <th>Piche Read</th>   
+                        </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let observe of archiveobserve  | paginate: { itemsPerPage: count, currentPage: p }">
+                              <td>{{observe.id}}</td>
+                              <td>{{observe.Date}}</td>
+                              <td>{{observe.station}}</td>
+                              <td>11223</td>
+                              <td>{{observe.TIME}}</td>
+                              <td>{{observe.Dry_Bulb}}</td>
+                              <td>{{observe.Wet_Bulb}}</td>
+                              <td>{{observe.Present_Weather}}</td>
+                              <td>{{observe.Visibility}}</td>
+                              <td>{{observe.Wind_Direction}}</td>
+                              <td>{{observe.Wind_Speed}}</td>
+                              <td>{{observe.Rainfall}}</td>
+                              <td>{{observe.Gusting}}</td>
+                              <td>{{observe.Max_Read}}</td>
+                              <td>{{observe.Min_Read}}</td>
+                              <td>{{observe.Piche_Read}}</td>
+                             </tr>
+                      </tbody>
+  
+                    </table>
+                    
+                 </div>
+                 <div class="text-right">
+                  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </div>
+              </div>
+              </mat-card>
+              </div>
+        </div>
+  
+  

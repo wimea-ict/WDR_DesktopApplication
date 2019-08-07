@@ -1,0 +1,281 @@
+
+<div class="tab">
+  <h2>Weather Summary Data:</h2>
+<mat-card  style="margin-bottom: 6%;">
+  <form (ngSubmit)="updateweathersummaryform()">
+<table id="example1" class="table table-bordered table-stripped">
+<tr>
+  <td>
+<div class="input-group ">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Station</span>
+  </div>
+    <input type="text" name="station" class="form-control"  value="Kampala"  class="form-control" [(ngModel)]="weathersummary.station">
+</div>
+</td>
+<td>
+<div class="input-group ">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Station Number</span>
+  </div>
+    <input type="text" name="stationnumber" readonly class="form-control" value="11223" readonly= "readonly" >
+  </div>
+  </td>
+  </tr>
+  <tr>
+      <td>
+    <div class="input-group ">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Date</span>
+      </div>
+        <input type="date" name="Date" class="form-control compulsory" placeholder="Enter select date" [(ngModel)]="weathersummary.Date">
+    </div>
+    </td>
+    <td>
+    <div class="input-group ">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Sunshine(Hrs)</span>
+      </div>
+        <input type="text" name="SUNSHINE" class="form-control" placeholder="Enter the Sunshine (Hrs)" [(ngModel)]="weathersummary.SUNSHINE">
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+          <td>
+        <div class="input-group ">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Max Temp</span>
+          </div>
+            <input type="text" name="TEMP_MAX" class="form-control" placeholder="Enter max temp" [(ngModel)]="weathersummary.TEMP_MAX">
+        </div>
+        </td>
+        <td>
+        <div class="input-group ">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Min Temp</span>
+          </div>
+            <input type="text" name="TEMP_MIN" class="form-control" placeholder="Enter min temp" [(ngModel)]="weathersummary.TEMP_MIN">
+          </div>
+          </td>
+          </tr>
+
+          <tr>
+              <td>
+            <div class="input-group ">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">DB 0600z</span>
+              </div>
+                <input type="text" name="DB_0600Z" class="form-control" placeholder="Enter DB for 0600Z" [(ngModel)]="weathersummary.DB_0600Z" >
+            </div>
+            </td>
+            <td>
+            <div class="input-group ">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">WB 0660Z</span>
+              </div>
+                <input type="text" name="WB_0600Z" class="form-control" placeholder="Enter WB for 0600Z" [(ngModel)]="weathersummary.WB_0600Z">
+              </div>
+              </td>
+              </tr>
+              <tr>
+                  <td>
+                <div class="input-group ">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">DP 0600Z</span>
+                  </div>
+                    <input type="text" name="DP_0600Z" class="form-control" placeholder="Enter DP for 0600Z" [(ngModel)]="weathersummary.DP_0600Z">
+                </div>
+                </td>
+                <td>
+                <div class="input-group ">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">VP 0600Z</span>
+                  </div>
+                    <input type="text" name="VP_0600Z" class="form-control" placeholder="Enter VP for 0600Z" [(ngModel)]="weathersummary.VP_0600Z" >
+                  </div>
+                  </td>
+                  </tr>
+                  <tr>
+                      <td>
+                    <div class="input-group ">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">RH 0600Z</span>
+                      </div>
+                        <input type="text" name="RH_0600Z" class="form-control" placeholder="Enter RH for 0600Z" [(ngModel)]="weathersummary.RH_0600Z">
+                    </div>
+                    </td>
+                    <td>
+                    <div class="input-group ">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">CLP 0600Z</span>
+                      </div>
+                        <input type="text" name="CLP_0600Z" class="form-control" placeholder="Enter CLP for 0600Z" [(ngModel)]="weathersummary.CLP_0600Z" >
+                      </div>
+                      </td>
+                      </tr>
+                      <tr>
+                          <td>
+                        <div class="input-group ">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">GPM 0600Z</span>
+                          </div>
+                            <input type="text" name="GPM_0600Z" class="form-control" placeholder="Enter GPM for 0600Z" [(ngModel)]="weathersummary.GPM_0600Z">
+                        </div>
+                        </td>
+                        <td>
+                        <div class="input-group ">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">WIND DIR 0600Z</span>
+                          </div>
+                            <input type="text" name="WIND_DIR_0600Z" class="form-control" placeholder="Enter Wind Direction for 0600Z" [(ngModel)]="weathersummary.WIND_DIR_0600Z" >
+                          </div>
+                          </td>
+                          </tr>
+                          <tr>
+                              <td>
+                            <div class="input-group ">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">FF 0600Z</span>
+                              </div>
+                                <input type="text" name="FF_0600Z" class="form-control" placeholder="Enter FF for 0600Z" [(ngModel)]="weathersummary.FF_0600Z">
+                            </div>
+                            </td>
+                            <td>
+                            <div class="input-group ">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">DB 1200Z</span>
+                              </div>
+                                <input type="text" name="DB_1200Z" class="form-control" placeholder="Enter DB for 1200Z" [(ngModel)]="weathersummary.DB_1200Z">
+                              </div>
+                              </td>
+                           </tr>
+  </table>
+                    <table id="example1" class="table table-bordered table-stripped">
+                                <tr>
+                                    <td>
+                                        <div class="input-group ">
+                                          <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">WB 1200Z</span>
+                                          </div>
+                                            <input type="text" name="WB_1200Z" class="form-control" placeholder="Enter WB for 1200Z" [(ngModel)]="weathersummary.WB_1200Z">
+                                          </div>
+                                      </td>
+                                      <td>
+                                        <div class="input-group ">
+                                          <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">DP 1200Z</span>
+                                          </div>
+                                            <input type="text" name="DP_1200Z" class="form-control" placeholder="Enter DP for 1200Z" [(ngModel)]="weathersummary.DP_1200Z">
+                                          </div>
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="input-group ">
+                                          <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">VP 1200Z</span>
+                                          </div>
+                                            <input type="text" name="VP_1200Z" class="form-control" placeholder="Enter VP for 1200Z" [(ngModel)]="weathersummary.VP_1200Z">
+                                          </div>
+                                      </td>
+                                      <td>
+                                        <div class="input-group ">
+                                          <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">RH 1200Z</span>
+                                          </div>
+                                            <input type="text" name="RH_1200Z" class="form-control" placeholder="Enter RH for 1200Z" [(ngModel)]="weathersummary.RH_1200Z">
+                                          </div>
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="input-group ">
+                                          <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">CLP 1200Z</span>
+                                          </div>
+                                            <input type="text" name="CLP_1200Z" class="form-control" placeholder="Enter CLP for 1200Z" [(ngModel)]="weathersummary.CLP_1200Z">
+                                          </div>
+                                      </td>
+                                      <td>
+                                        <div class="input-group ">
+                                          <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">GPM 1200Z</span>
+                                          </div>
+                                            <input type="text" name="GPM_1200Z" class="form-control" placeholder="Enter GPM for 1200Z" [(ngModel)]="weathersummary.GPM_1200Z">
+                                          </div>
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="input-group ">
+                                          <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">WIND DIR 1200Z</span>
+                                          </div>
+                                            <input type="text" name="WIND_DIR_1200Z" class="form-control" placeholder="Enter Wind Direction for 1200Z" [(ngModel)]="weathersummary.WIND_DIR_1200Z">
+                                          </div>
+                                      </td>
+                                      <td>
+                                        <div class="input-group ">
+                                          <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">FF 1200Z</span>
+                                          </div>
+                                            <input type="text" name="FF_1200Z" class="form-control" placeholder="Enter FF for 1200Z" [(ngModel)]="weathersummary.FF_1200Z">
+                                          </div>
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="input-group ">
+                                          <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">Wind Run  
+                                            </span>
+                                          </div>
+                                            <input type="text" name="WIND_RUN" class="form-control" placeholder="Enter Wind Run" [(ngModel)]="weathersummary.WIND_RUN">
+                                          </div>
+                                      </td>
+                                      <td>
+                                        <div class="input-group ">
+                                          <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">R/F</span>
+                                          </div>
+                                            <input type="text" name="R_F" class="form-control" placeholder="Enter R/F" [(ngModel)]="weathersummary.R_F">
+                                          </div>
+                                        </td>
+                                </tr>
+                               <tr>
+                                 <td colspan="10">
+                                    <div class="form-group" style="margin-left: 5%; font-weight: bold;">
+                                        <label><span>Did we have: </span></label> <br>
+                                        <label >
+                                            <input type="checkbox" name="ThunderStorm" [(ngModel)]="weathersummary.ThunderStorm" >
+                                            <!-- <ins class="iCheck-helper" style="position: absolute; top: 0%; left:0%; display:block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>    -->
+                                          Thunder Storm(Ts)
+                                        </label>
+                                              <label >
+                                                    <input type="checkbox" name="Fog" [(ngModel)]="weathersummary.Fog">
+                                                    Fog(Fg)
+                                                </label>
+                                                <label >
+                                                  <input type="checkbox" name="Haze" [(ngModel)]="weathersummary.Haze">
+                                                  Haze(Hz)
+                                                </label>
+                                                <label >
+                                                  <input type="checkbox" name="HailStorm" [(ngModel)]="weathersummary.HailStorm">
+                                                  Hail Storm(Hs)
+                                                </label>
+                                                <label >
+                                                  <input type="checkbox" name="EarthQuake" [(ngModel)]="weathersummary.EarthQuake">
+                                                  Earth Quake
+                                              </label>
+                                        </div >
+                          </table>
+                          <span class="btn btn-danger" (click)= "back()">
+                              <i class ="fa fa-arrow-left"></i>
+                              BACK
+                          </span> 
+                          <button class="btn btn-success" style="margin-left: 70%" type="submit">
+                            <i class="fa fa-plus"> </i> UPDATE</button>
+  </form>
+</mat-card>
+</div>

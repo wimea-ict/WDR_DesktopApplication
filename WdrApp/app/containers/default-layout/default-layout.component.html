@@ -1,0 +1,74 @@
+<app-header
+  style="background-color: #56a5db;"
+  [navbarBrandRouterLink]="['/dashboard']"
+  [fixed]="true"
+  [navbarBrandFull]="{src: 'assets/img/brand/wimea-full.svg', width: 89, height: 45, alt: 'WIMEA Logo'}"
+  [sidebarToggler]="'lg'"
+   >
+  <ul class="nav navbar-nav d-md-down-none">
+    <li class="nav-item px-3">
+      <span class="nav-link" style="color: whitesmoke; text-transform: uppercase; font-size: 18px;"><strong><i>{{authority}} PANEL</i></strong></span>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav ml-auto">
+    <li class="nav-item dropdown" dropdown placement="bottom right">
+      <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle (click)="false">
+        <img src="C:/Program Files(x86)/wimea-ict/Wimea-Ict WDR/dist/assets/img/avatars/6-resized.jpg" class="img-avatar"/>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" *dropdownMenu aria-labelledby="simple-dropdown">
+        <a class="dropdown-item" (click)="profile()"><i class="fa fa-user"></i> Profile</a>
+        <div class="divider"></div>
+        <a class="dropdown-item" (click)="logout()"><i class="fa fa-lock"></i> Logout</a>
+      </div>
+    </li>
+  </ul>
+</app-header>
+<div class="app-body">
+  <app-sidebar [fixed] = "true" [display]="'lg'">
+    <div *ngIf="authority === 'Manager Data'">
+      <app-sidebar-nav [navItems]="ManagernavItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
+    </div>
+    <div *ngIf="authority === 'OC'">
+        <app-sidebar-nav [navItems]="OCnavItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
+      </div>
+      <div *ngIf="authority === 'Senior Zonal Officer'" style="font-size:12px;">
+        <app-sidebar-nav [navItems]="SeniorZonalofficernavItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
+      </div>
+      <div *ngIf="authority === 'Zonal Officer'" style="font-size: 12px;">
+        <app-sidebar-nav [navItems]="SeniorZonalofficernavItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
+      </div>
+      <div *ngIf="authority === 'Manager Station Networks'" style="font-size: 13px;">
+        <app-sidebar-nav [navItems]="ManagerStationNetworksnavItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
+      </div>
+      <div *ngIf="authority === 'Weather Analyst'" style="font-size: 13px;">
+        <app-sidebar-nav [navItems]="WeatherAnalystnavItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
+      </div>
+      <div *ngIf="authority === 'Weather Forecaster'" style="font-size: 13px;">
+        <app-sidebar-nav [navItems]="WeatherForecasternavItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
+      </div>
+      <div *ngIf="authority === 'Observer Archive'" style="font-size: 12px;">
+        <app-sidebar-nav [navItems]="ObservernavItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
+      </div>
+      <div *ngIf="authority === 'Observer'" style="font-size: 12px;">
+        <app-sidebar-nav [navItems]="ObservernavItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
+      </div>
+      <div *ngIf="authority === 'Data Officer'" style="font-size: 12px;">
+        <app-sidebar-nav [navItems]="DataOfficernavItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
+      </div>
+      <div *ngIf="authority === 'Senior Data Officer'" style="font-size: 12px;">
+        <app-sidebar-nav [navItems]="DataOfficernavItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
+      </div>
+  </app-sidebar>
+
+  <!-- Main content -->
+  <main class="main">
+    <cui-breadcrumb>
+    </cui-breadcrumb>
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>
+<app-footer style="background: #56a5db;">
+  <span style="margin-left: 430px; color: whitesmoke">WIMEA-ICT WDR &copy; 2019.  All rights reserved.</span>
+</app-footer>

@@ -1,0 +1,55 @@
+<section class="content-header" style="margin-left: 2%">
+  <ol >
+      <h3  class="active text-primary" >Archive Scanned Yearly Rainfall Form Report 
+         <small>page</small>
+         <button class="btn btn-primary no-print" (click)="annualrainfall()">
+            <i class="fa fa-plus"></i>
+              Add new Scanned Yearly Rainfall Form Report
+            </button>
+            <button class="btn btn-primary no-print"><i class="fa fa-print"></i> PRINT</button>
+      </h3>
+  </ol>
+
+</section>
+
+    <div class="tab" style="margin-left: 5%">
+        <div class="mat-elevation-z8">
+          <mat-card style="margin-bottom: 5%">
+            <div >
+              <div class="box-header">
+                 <h3>Scanned Yearly Rainfall Form Report Details</h3>
+               </div>
+               <div class="table-responsive table-hover " >
+                  <table id="example1" class="table" style="overflow: auto">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th>No.</th>
+                        <th>Station Name</th>
+                        <th>Year</th>
+                        <th>File Name</th>
+                        <th>Description</th>
+                        <th>Approved</th>
+                        <th>Submitted By</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor = "let scanannualrainfall of scannedAnnualrainfall | paginate: { itemsPerPage: count, currentPage: p }">
+                      <td>{{scanannualrainfall.id}}</td>
+                      <td>{{scanannualrainfall.station}}</td>
+                      <td>{{scanannualrainfall.year}}</td>
+                      <td>{{scanannualrainfall.FileRef | slice:12}}</td>
+                      <td>{{scanannualrainfall.Description}}</td>
+                      <td *ngIf="scanannualrainfall.Approved === 0">False</td>
+                      <td *ngIf="scanannualrainfall.Approved === 1">True</td>
+                      <td>{{scanannualrainfall.SY_SubmittedBy}}</td>
+                    </tbody>
+
+                  </table>
+               </div>
+               <div class="text-right">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+              </div>
+            </div>
+            </mat-card>
+            </div>
+      </div>
+

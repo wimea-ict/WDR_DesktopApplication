@@ -1,0 +1,857 @@
+<div>
+    <div>
+      <mat-card style="margin-bottom: 5%;">
+        <form (ngSubmit) = "addSynoptic()">
+            <!-- {{synoptic | json}} -->
+          <table class="table table-bordered table-stripped">
+            <tr>
+                <td colspan = "4">
+                    <div class="input-group " >
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Station</span>
+                      </div>
+                        <input type="text" name="station" [(ngModel)]= "synoptic.station" required class="form-control" value="Kampala" >
+                      
+                    </div>
+                </td>
+    
+              <td colspan = "4">
+                <div class="input-group ">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id ="basic-addon1">Station Number</span>
+                  </div>
+                    <input type="text" name="stationnumber"  required class="form-control" value="11223" readonly="readonly">
+                  
+                </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td colspan = "4">
+                      <div class="input-group " >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">Date</span>
+                        </div>
+                          <input type="date" name="Date" [(ngModel)]= "synoptic.Date" required class="form-control" placeholder="Enter the date" > 
+                      </div>
+                  </td>
+                  <td colspan = "4">
+                      <div class="input-group " >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"  id="basic-addon1">TIME</span>
+                        </div>
+                        <select class="form-control compulsory" name="TIME" [(ngModel)]= "synoptic.TIME" placeholder="--select TIME options--">
+                          <option>--select TIME options--</option>
+                            <option value="0000Z">0000Z</option>
+                            <option value="0300Z">0300Z</option>
+                            <option value="0600Z">0600Z</option>
+                            <option value="0900Z">0900Z</option>
+                            <option value="1200Z">1200Z</option>
+                            <option value="1500Z">1500Z</option>
+                            <option value="1800Z">1800Z</option>
+                            <option value="2100Z">1200Z</option>
+                          </select>
+                        
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td colspan = "4">
+                      <div class="input-group " >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">Unit of Wind Speed</span>
+                        </div>
+                          <input type="text" name="UWS" [(ngModel)]= "synoptic.UWS" required class="form-control" placeholder="Enter unit of wind speed" > 
+                      </div>
+                  </td>
+                  <td colspan = "4">
+                      <div class="input-group " >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">Block Number</span>
+                        </div>
+                          <input type="text" name="BN" [(ngModel)]= "synoptic.BN" required class="form-control" value="63" placeholder="63" readonly > 
+                      </div>
+                  </td>
+              </tr>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Ind. or Omission of Precipitation</span>
+                    </div>
+                      <input type="text" name="IOOP" [(ngModel)]= "synoptic.IOOP" required class="form-control" placeholder="Ind. or Omission of Precipitation " > 
+                  </div>
+              </td>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Type of station/present & past weather</span>
+                    </div>
+                      <input type="text" name="TSPPW " [(ngModel)]= "synoptic.TSPPW" required class="form-control" placeholder="Type of station/present & past weather" > 
+                  </div>
+              </td>
+            <tr>
+            <td colspan = "4">
+                <div class="input-group " >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Height of lowest cloud</span>
+                  </div>
+                    <input type="text" name="HLC" [(ngModel)]= "synoptic.HLC" required class="form-control" placeholder="Height of lowest cloud" > 
+                </div>
+            </td>
+            <td colspan = "4">
+                <div class="input-group " >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Horizontal Visibility</span>
+                  </div>
+                    <input type="text" name="HV" [(ngModel)]= "synoptic.HV" required class="form-control" placeholder="Horizontal Visibility" > 
+                </div>
+            </td>
+            </tr>
+            <tr>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Total cloud cover</span>
+                    </div>
+                      <input type="text" name="TCC" [(ngModel)]= "synoptic.TCC" required class="form-control" placeholder="Total cloud cover" > 
+                  </div>
+              </td> 
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Wind Direction</span>
+                    </div>
+                      <input type="text" name="WD" [(ngModel)]= "synoptic.WD" required class="form-control" placeholder="Wind Direction" > 
+                  </div>
+              </td>
+            </tr>
+            <tr>
+                <td colspan = "4">
+                    <div class="input-group " >
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Wind Speed</span>
+                      </div>
+                        <input type="text" name="WS" [(ngModel)]= "synoptic.WS" required class="form-control" placeholder="Wind Speed" > 
+                    </div>
+                </td>
+                <td colspan = "4">
+                    <div class="input-group " >
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Group Indicator</span>
+                      </div>
+                        <input type="text" name="GI1_1" [(ngModel)]= "synoptic.GI1_1" required class="form-control" value="1" readonly placeholder="1" > 
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan = "4">
+                    <div class="input-group " >
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Sign of the Data</span>
+                      </div>
+                        <input type="text" name="SignOfData_1" [(ngModel)]= "synoptic.SignOfData_1" required class="form-control" value="0" readonly  placeholder="0"> 
+                    </div>
+                </td>
+                <td colspan = "4">
+                    <div class="input-group " >
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Air Temperature</span>
+                      </div>
+                        <input type="text" name="Air_temperature" [(ngModel)]= "synoptic.Air_temperature" required class="form-control" placeholder="Air Temperature" > 
+                    </div>
+                </td>
+            </tr>
+            </table>
+            <table class="table table-bordered table-stripped">
+              <tr>
+                  <td colspan = "4">
+                      <div class="input-group " >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">Group Indicator 2</span>
+                        </div>
+                          <input type="text" name="GI2_1" [(ngModel)]= "synoptic.GI2_1" required class="form-control" value="2" readonly placeholder="2" > 
+                      </div>
+                  </td>
+                  <td colspan = "4">
+                      <div class="input-group " >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">Sign of the data</span>
+                        </div>
+                          <input type="text" name="SignOfData_2" [(ngModel)]= "synoptic.SignOfData_2" required class="form-control" value="0" readonly placeholder="0" > 
+                      </div>
+                  </td>
+                  <tr>
+                  <td colspan = "4">
+                      <div class="input-group " >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">Dew point temperature</span>
+                        </div>
+                          <input type="text" name="Dewpoint_temperature" [(ngModel)]= "synoptic.Dewpoint_temperature" required class="form-control" placeholder="Dew point temperature"> 
+                      </div>
+                  </td>
+                  <td colspan = "4">
+                      <div class="input-group " >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">Group Indicator 3</span>
+                        </div>
+                          <input type="text" name="GI3_1" [(ngModel)]= "synoptic.GI3_1" required class="form-control" value="3" readonly placeholder="3" > 
+                      </div>
+                  </td>   
+              </tr>
+              <tr>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Pressure station level</span>
+                    </div>
+                      <input type="text" name="PASL" [(ngModel)]= "synoptic.PASL" required class="form-control" placeholder="pressure at station level" > 
+                  </div>
+              </td>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Group Indicator 4</span>
+                    </div>
+                      <input type="text" name="GI4_1" [(ngModel)]= "synoptic.GI4_1" required class="form-control" value="4" readonly placeholder="4" > 
+                  </div>
+              </td>
+              </tr>
+              <tr>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Standard isobaric surface </span>
+                    </div>
+                      <input type="text" name="SIS" [(ngModel)]= "synoptic.SIS" required class="form-control" value="8" readonly placeholder="8" > 
+                  </div>
+              </td>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Geopotential of SIS</span>
+                    </div>
+                      <input type="text" name="GSIS" [(ngModel)]= "synoptic.GSIS" required class="form-control" placeholder="Geopotential of isobaric surface" > 
+                  </div>
+              </td>
+              </tr>
+            <tr>
+            <td colspan = "4">
+                <div class="input-group " >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Group Indicator 6</span>
+                  </div>
+                    <input type="text" name="GI6_1" [(ngModel)]= "synoptic.GI6_1" required class="form-control" value="6" readonly placeholder="6" > 
+                </div>
+            </td>
+            <td colspan = "4">
+                <div class="input-group " >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Amount of Precipitation</span>
+                  </div>
+                    <input type="text" name="AOP" [(ngModel)]= "synoptic.AOP" required class="form-control" placeholder="Amount of precipitation" > 
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan = "4">
+                <div class="input-group " >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Duration period of precipitation</span>
+                  </div>
+                    <input type="text" name="DPOP" [(ngModel)]= "synoptic.DPOP"  required class="form-control" placeholder="Duration period of precipitation" > 
+                </div>
+            </td> 
+            <td colspan = "4">
+                <div class="input-group " >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Group Indicator 7</span>
+                  </div>
+                    <input type="text" name="GI7_1" [(ngModel)]= "synoptic.GI7_1" required class="form-control" value="7" readonly placeholder="7" > 
+                </div>
+            </td>
+          </tr>
+          <tr>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">present Weather</span>
+                </div>
+                  <input type="text" name="Present_Weather" [(ngModel)]= "synoptic.Present_Weather" required class="form-control" placeholder="Present weather" > 
+              </div>
+          </td>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Past weather</span>
+                </div>
+                  <input type="text" name="Past_Weather" [(ngModel)]= "synoptic.Past_Weather" required class="form-control" placeholder="Past weather"> 
+              </div>
+          </td>
+          </tr>
+          <tr>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Group Indicator 8</span>
+                </div>
+                  <input type="text" name="GI8_1" [(ngModel)]= "synoptic.GI8_1" required class="form-control" value="8" readonly  placeholder="8"> 
+              </div>
+          </td>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Amount of clouds</span>
+                </div>
+                  <input type="text" name="AOC" [(ngModel)]= "synoptic.AOC" required class="form-control" placeholder="Amount of clouds"> 
+              </div>
+          </td>
+          </tr>
+          <tr>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Clouds of the Genera Sc. St. Cu. Cb</span>
+                    </div>
+                      <input type="text" name="CLOG" [(ngModel)]= "synoptic.CLOG" required class="form-control" placeholder="Clouds of the Genera Sc. St. Cu. Cb" > 
+                  </div>
+              </td>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Clouds of the Genera Ac. As. Ns</span>
+                    </div>
+                      <input type="text" name="CGOG" [(ngModel)]= "synoptic.CGOG" required class="form-control" placeholder="Clouds of the Genera Ac. As. Ns"> 
+                  </div>
+              </td>
+          </tr>
+          <tr>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Clouds of the Genera Cl Cc Cs</span>
+                </div>
+                  <input type="text" name="CHOG" [(ngModel)]= "synoptic.CHOG" required class="form-control" placeholder="Clouds of the Genera Cl Cc Cs" > 
+              </div>
+          </td>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Section Indicator</span>
+                </div>
+                  <input type="text" name="Section_Indicator333" [(ngModel)]= "synoptic.Section_Indicator333" required class="form-control" value="333" readonly placeholder="333"> 
+              </div>
+          </td>
+          </tr>
+          <tr>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Group Indicator 0</span>
+                    </div>
+                      <input type="text" name="GI0_1" [(ngModel)]= "synoptic.GI0_1" required class="form-control" value="0" readonly  placeholder="0"> 
+                  </div>
+              </td>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Grass minimum temperature</span>
+                    </div>
+                      <input type="text" name="GMT" [(ngModel)]= "synoptic.GMT" required class="form-control" placeholder="Grass minimum temperature"> 
+                  </div>
+              </td>
+          </tr>
+          <tr>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Character & intensity of precipitation</span>
+                    </div>
+                      <input type="text" name="CIOP" [(ngModel)]= "synoptic.CIOP" required class="form-control" placeholder="Character & intensity of precipitation" > 
+                  </div>
+              </td>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Beginning or end of precipitation</span>
+                    </div>
+                      <input type="text" name="BEOP" [(ngModel)]= "synoptic.BEOP" required class="form-control" placeholder="Beginning or end of precipitation"> 
+                  </div>
+              </td>
+          </tr>
+          <tr >
+            <td colspan="10">
+              <div class="form-group" style="margin-left: 5%; font-weight: bold;">
+                  <label ><span>Did we have: </span></label> <br>
+                        <label >
+                            <input type="checkbox" name="ThunderStorm" [(ngModel)]= "synoptic.ThunderStorm">
+                          Thunder Storm(Ts)
+                        </label>
+                          <label >
+                            <input type="checkbox" name="HailStorm" [(ngModel)]= "synoptic.HailStorm">
+                            Hail Storm(Hs)
+                          </label>
+                          <label >
+                              <input type="checkbox" name="Fog" [(ngModel)]= "synoptic.Fog">
+                              Fog(Fg)
+                          </label>
+                          <label >
+                            <input type="checkbox" name="EarthQuake" [(ngModel)]= "synoptic.EarthQuake">
+                            Earth Quake
+                        </label>
+                        <label>
+                          <input type="checkbox" name="Anemometer_Reading" [(ngModel)]= "synoptic.Anemometer_Reading">
+                          Anemometer Reading(KM)
+                        </label>
+                        <label>
+                          <input type="checkbox" name="Actual_Rainfall" [(ngModel)]= "synoptic.Actual_Rainfall">
+                          Actual Rainfall
+                        </label>
+                  </div >
+                </td>
+            </tr>
+            <tr>
+                <td colspan = "4">
+                    <div class="input-group " >
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Group Indicator 1</span>
+                      </div>
+                        <input type="text" name="GI1_2" [(ngModel)]= "synoptic.GI1_2" required class="form-control" value="1" readonly> 
+                    </div>
+                </td>
+                <td colspan = "4">
+                    <div class="input-group " >
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Sign of the data</span>
+                      </div>
+                        <input type="text" name="SignOfData_3" [(ngModel)]= "synoptic.SignOfData_3" required class="form-control" value="0" readonly placeholder="0"> 
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan = "4">
+                    <div class="input-group " >
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Minimum temperature</span>
+                      </div>
+                        <input type="text" name="Max_TempTx" [(ngModel)]= "synoptic.Max_TempTx" required class="form-control" placeholder="Minimum temperature" > 
+                    </div>
+                </td>
+                <td colspan = "4">
+                    <div class="input-group " >
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Group Indicator 2</span>
+                      </div>
+                        <input type="text" name="GI2_2" [(ngModel)]= "synoptic.GI2_2" required class="form-control" value="2" readonly placeholder="2"> 
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan = "4">
+                    <div class="input-group " >
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Sign of the data</span>
+                      </div>
+                        <input type="text" name="SignOfData_4" [(ngModel)]= "synoptic.SignOfData_4" required class="form-control" value="0" readonly placeholder="0"> 
+                    </div>
+                </td>
+                <td colspan = "4">
+                    <div class="input-group " >
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Maximun temperature</span>
+                      </div>
+                        <input type="text" name="Max_TempTn" [(ngModel)]= "synoptic.Max_TempTn" required class="form-control" placeholder="Maximun temperature"> 
+                    </div>
+                </td>
+            </tr>    
+          </table>
+          <table class="table table-bordered table-stripped">
+          <tr>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Group Indicator 5</span>
+                    </div>
+                      <input type="text" name="GI5_1" [(ngModel)]= "synoptic.GI5_1" required class="form-control" value="5" readonly placeholder="5"> 
+                  </div>
+              </td>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Amount of evaporation</span>
+                    </div>
+                      <input type="text" name="AOE" [(ngModel)]= "synoptic.AOE" required class="form-control" placeholder="Amount of evaporation"> 
+                  </div>
+              </td>
+          </tr> 
+          <tr>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Indicator of type of instrumentation</span>
+                </div>
+                  <input type="text" name="ITI" [(ngModel)]= "synoptic.ITI" required class="form-control" placeholder="Indicator of type of instrumentation"> 
+              </div>
+          </td>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Group Indicator 55</span>
+                </div>
+                  <input type="text" name="GI55" [(ngModel)]= "synoptic.GI55" required class="form-control" value="55" readonly placeholder="55"> 
+              </div>
+          </td>
+          </tr> 
+          <tr>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Duration of sunshine</span>
+                </div>
+                  <input type="text" name="DOS" [(ngModel)]= "synoptic.DOS" required class="form-control" placeholder="Duration of sunshine"> 
+              </div>
+          </td>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Group Indicator 5</span>
+                </div>
+                  <input type="text" name="GI5_2" [(ngModel)]= "synoptic.GI5_2" required class="form-control" value="5" readonly placeholder="5"> 
+              </div>
+          </td>
+         </tr>   
+         <tr>
+            <td colspan = "4">
+                <div class="input-group " >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Sign of pressure change</span>
+                  </div>
+                    <input type="text" name="SPC" [(ngModel)]= "synoptic.SPC" required class="form-control" placeholder="Sign of pressure change"> 
+                </div>
+            </td>
+            <td colspan = "4">
+                <div class="input-group " >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Pressure change in 24 hrs</span>
+                  </div>
+                    <input type="text" name="PCI24Hrs" [(ngModel)]= "synoptic.PCI24Hrs" required class="form-control" placeholder="Pressure change in 24 hrs"> 
+                </div>
+            </td>
+           </tr>  
+           <tr>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Group Indicator 6</span>
+                    </div>
+                      <input type="text" name="GI6_2" [(ngModel)]= "synoptic.GI6_2" required class="form-control" value="6" readonly placeholder="6"> 
+                  </div>
+              </td>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Amount of precipitation</span>
+                    </div>
+                      <input type="text" name="AOP_2" [(ngModel)]= "synoptic.AOP_2" required class="form-control" placeholder="Amount of precipitation"> 
+                  </div>
+              </td>
+              </tr>  
+              <tr>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Duration of period of precipitation</span>
+                    </div>
+                      <input type="text" name="DPOP_2" [(ngModel)]= "synoptic.DPOP_2" required class="form-control" placeholder="Duration of period of precipitation"> 
+                  </div>
+              </td>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Group Indicator 8</span>
+                    </div>
+                      <input type="text" name="GI8_2" [(ngModel)]= "synoptic.GI8_2" required class="form-control" value="8" readonly placeholder="8"> 
+                  </div>
+              </td>
+              </tr> 
+              <tr>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Amount of individual cloud layer</span>
+                    </div>
+                      <input type="text" name="AICL" [(ngModel)]= "synoptic.AICL" required class="form-control" placeholder="Amount of individual cloud layer"> 
+                  </div>
+              </td>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Genus of cloud</span>
+                    </div>
+                      <input type="text" name="GOC" [(ngModel)]= "synoptic.GOC" required class="form-control" placeholder="Genus of cloud"> 
+                  </div>
+              </td>
+              </tr>  
+              
+        <tr>
+        <td colspan = "4">
+            <div class="input-group " >
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Height of  cloud base layer or mass</span>
+              </div>
+                <input type="text" name="HBCLOM" [(ngModel)]= "synoptic.HBCLOM" required class="form-control" placeholder="Height of cloud base layer or mass"> 
+            </div>
+        </td>
+        <td colspan = "4">
+            <div class="input-group " >
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Group Indicator 8</span>
+              </div>
+                <input type="text" name="GI8_3" [(ngModel)]= "synoptic.GI8_3" required class="form-control" value="8" readonly placeholder="8"> 
+            </div>
+        </td>
+        </tr>      
+          </table>
+         <table class="table table-bordered table-stripped">
+        <tr>
+            <td colspan = "4">
+                <div class="input-group " >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Amount of individual cloud layer</span>
+                  </div>
+                    <input type="text" name="AICL_2" [(ngModel)]= "synoptic.AICL_2" required class="form-control" placeholder="Amount of individual cloud layer"> 
+                </div>
+            </td>
+            <td colspan = "4">
+                <div class="input-group " >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Genus of cloud</span>
+                  </div>
+                    <input type="text" name="GOC_2" [(ngModel)]= "synoptic.GOC_2" required class="form-control" placeholder="Genus of cloud"> 
+                </div>
+            </td>
+            </tr> 
+            <tr>
+            <td colspan = "4">
+                <div class="input-group " >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Height of cloud base layer or mass</span>
+                  </div>
+                    <input type="text" name="HBCLOM_2" [(ngModel)]= "synoptic.HBCLOM_2" required class="form-control" placeholder="Height of cloud base layer or mass"> 
+                </div>
+            </td>
+            <td colspan = "4">
+                <div class="input-group " >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Group Indicator 8</span>
+                  </div>
+                    <input type="text" name="GI8_4" [(ngModel)]= "synoptic.GI8_4" required class="form-control" value="8" readonly placeholder="8"> 
+                </div>
+            </td>
+            </tr> 
+            <tr>
+            <td colspan = "4">
+                <div class="input-group " >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Amount of individual cloud layer 3</span>
+                  </div>
+                    <input type="text" name="AICL_3" [(ngModel)]= "synoptic.AICL_3" required class="form-control" placeholder="Amount of individual cloud layer 3"> 
+                </div>
+            </td>
+            <td colspan = "4">
+                <div class="input-group " >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Genus of cloud 3</span>
+                  </div>
+                    <input type="text" name="GOC_3" [(ngModel)]= "synoptic.GOC_3" required class="form-control" placeholder="Genus of cloud 3"> 
+                </div>
+            </td>
+            </tr> 
+            <tr>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Height of  cloud base layer or mass 3</span>
+                </div>
+                  <input type="text" name="HBCLOM_3" [(ngModel)]= "synoptic.HBCLOM_3" required class="form-control" placeholder="Height of cloud base layer or mass 3"> 
+              </div>
+          </td>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Group Indicator 8</span>
+                </div>
+                  <input type="text" name="GI8_5" [(ngModel)]= "synoptic.GI8_5" required class="form-control" value="8" readonly placeholder="8"> 
+              </div>
+          </td>
+          </tr> 
+          <tr>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Amount of individual cloud layer 4</span>
+                </div>
+                  <input type="text" name="AICL_4" [(ngModel)]= "synoptic.AICL_4" required class="form-control" placeholder="Amount of individual cloud layer 4"> 
+              </div>
+          </td>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Genus of cloud 4</span>
+                </div>
+                  <input type="text" name="GOC_4" [(ngModel)]= "synoptic.GOC_4" required class="form-control" placeholder="Genus of cloud 4"> 
+              </div>
+          </td>
+          </tr> 
+          <tr>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Height of cloud base layer or mass 4</span>
+                    </div>
+                      <input type="text" name="HBCLOM_4" [(ngModel)]= "synoptic.HBCLOM_4" required class="form-control" placeholder="Height of cloud base layer or mass 4"> 
+                  </div>
+              </td>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Group Indicator 9</span>
+                    </div>
+                      <input type="text" name="GI9" [(ngModel)]= "synoptic.GI9" required class="form-control" value="9" readonly placeholder="9"> 
+                  </div>
+              </td>
+              </tr> 
+              <tr>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Suplementary information</span>
+                    </div>
+                      <input type="text" name="Supp_Info" [(ngModel)]= "synoptic.Supp_Info" required class="form-control" placeholder="Suplementary information"> 
+                  </div>
+              </td>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Section Indicator 555</span>
+                    </div>
+                      <input type="text" name="Section_Indicator555" [(ngModel)]= "synoptic.Section_Indicator555" required class="form-control" value="555" placeholder="555" readonly> 
+                  </div>
+              </td>
+              </tr> 
+              <tr>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Group Indicator 1</span>
+                    </div>
+                      <input type="text" name="GI1_3" [(ngModel)]= "synoptic.GI1_3" required class="form-control" value="1" readonly placeholder="1"> 
+                  </div>
+              </td>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Sign of data 5</span>
+                    </div>
+                      <input type="text" name="SignOfData_5" [(ngModel)]= "synoptic.SignOfData_5" required class="form-control" value="0" readonly placeholder="0"> 
+                  </div>
+              </td>
+              </tr>
+              <tr>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Wet bulb temperature</span>
+                    </div>
+                      <input type="text" name="Wetbulb_Temp" [(ngModel)]= "synoptic.Wetbulb_Temp" required class="form-control" placeholder="wet bulb temperature"> 
+                  </div>
+              </td>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Relative Humidity</span>
+                    </div>
+                      <input type="text" name="R_Humidity" [(ngModel)]= "synoptic.R_Humidity" required class="form-control" placeholder="Relative humidity"> 
+                  </div>
+              </td>
+              </tr>  
+              <tr>
+                  <td colspan = "4">
+                      <div class="input-group " >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">Vapour Pressure</span>
+                        </div>
+                          <input type="text" name="V_Pressure" [(ngModel)]= "synoptic.V_Pressure" required class="form-control" placeholder="Vapour pressure"> 
+                      </div>
+                  </td>
+                  <td>
+
+                  </td>
+              </tr>
+           <tr>
+          <td colspan="10" style="text-align: center">
+            <b>
+              Comments Section
+            </b>
+          </td>
+        </tr>
+        <tr>
+        <td colspan = "4">
+            <div class="input-group " >
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Remarks</span>
+              </div>
+                <input type="text" name="remarks" [(ngModel)]= "synoptic.remarks" required class="form-control" placeholder="Remarks"> 
+            </div>
+        </td>
+        <td colspan = "4">
+            <div class="input-group " >
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Time</span>
+              </div>
+                <input type="time" name="time_" [(ngModel)]= "synoptic.time_" required class="form-control" > 
+            </div>
+        </td>
+        </tr> 
+        <tr>
+            <td colspan = "4">
+                <div class="input-group " >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Observer on duty</span>
+                  </div>
+                    <input type="text" name="ObserverOnDuty" [(ngModel)]= "synoptic.ObserverOnDuty" required class="form-control" placeholder="Observer on duty" > 
+                </div>
+            </td>
+            <td>
+
+            </td>
+        </tr> 
+        <tr>
+        <td colspan = "4">
+            <div class="input-group " >
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">T0</span>
+              </div>
+                <input type="text" name="to_" [(ngModel)]= "synoptic.to_" required class="form-control" > 
+            </div>
+        </td>
+        <td colspan = "4">
+            <div class="input-group " >
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">From</span>
+              </div>
+                <input type="text" name="from_" [(ngModel)]= "synoptic.from_" required class="form-control" > 
+            </div>
+        </td>
+        </tr> 
+         </table>
+         <div  >
+            <span class="btn btn-danger" (click)= "back()">
+                <i class ="fa fa-arrow-left"></i>
+                BACK
+            </span> 
+            <button class="btn btn-success" style="margin-left: 70%">
+              <i class="fa fa-plus"> </i> SUBMIT</button>
+         </div>
+        </form>
+      </mat-card>
+    </div>
+  </div>

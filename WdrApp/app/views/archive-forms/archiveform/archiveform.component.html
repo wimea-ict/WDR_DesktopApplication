@@ -1,0 +1,59 @@
+<section class="content-header" style="margin-left: 2%">
+        <ol class="">
+            <h3  class="active text-primary" >Archive Monthly Rainfall Report Data 
+               <small>page</small>
+               <button class="btn btn-primary " (click)="Archive()" style="margin-left: 3%">
+                  <i class="fa fa-plus"></i>
+                    Add Archive Monthly Rainfall
+                  </button>
+                  <button  class="btn btn-primary " style="margin-left: 3%"><i class="fa fa-print"></i> PRINT</button> 
+            </h3>
+        </ol>
+      </section>
+      
+          <div class="tab" style="margin-left: 5%;">
+              <div class="mat-elevation-z8">
+                <mat-card style="margin-bottom: 5%">
+                  <div>
+                    <div class="box-header">
+                       <h3 >Archive Monthly Rainfall Report</h3>
+                     </div>
+                     <div class="table-responsive table-hover">
+                        <table id="example1"class="table" style="overflow: auto">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th >Id</th>
+                              <th>Date</th>
+                              <th>Station </th>
+                              <th>RAINFALL</th>
+                              <th>Approved</th>
+                              <th>Submitted By</th>
+                              <th *ngIf="authority === 'Data Officer' || authority === 'Senior Data Officer'">Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let archive of archivemonthly | paginate: { itemsPerPage: count, currentPage: p }">
+                                  <td>{{archive.id}}</td>
+                                  <td>{{archive.Date | slice:0:10}}</td>
+                                  <td>{{archive.station}}</td>
+                                  <td>{{archive.Rainfall}}</td>
+                                 <td>{{archive.Approved}}</td>
+                                  <td>{{archive.AR_SubmittedBy}}</td>
+                                  <td *ngIf="authority === 'Data Officer' || authority === 'Senior Data Officer'">
+                                  <button  type="button" class="btn btn-primary" name="button" (click)= "editarchive(archive.id, archive.station)" ><i class="fa fa-edit"></i>Edit</button>
+                                 </td>
+                                 </tr>
+                          </tbody>
+      
+                        </table>
+                     </div>
+                     <div class="text-right">
+                      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                    </div>
+      
+                  </div>
+                  </mat-card>
+                  </div>
+            </div>
+      
+      

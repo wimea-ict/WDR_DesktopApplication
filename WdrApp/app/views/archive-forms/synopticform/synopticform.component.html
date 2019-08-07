@@ -1,0 +1,72 @@
+<section class="content-header" style="margin-left: 2%">
+    <ol class="">
+        <h3  class="active text-primary" >Archive Synoptic Form 
+           <small>page</small>
+           <button class="btn btn-primary " (click)="synoptic()" style="margin-left: 4%">
+              <i class="fa fa-plus"></i>
+                Add Synoptic info
+              </button>
+              <button  class="btn btn-primary " style="margin-left: 3%"><i class="fa fa-print"></i> PRINT</button>
+        </h3>
+    </ol>
+  </section>
+      <div class="tab" style="margin-left: 5%">
+          <div class="mat-elevation-z8">
+            <mat-card style="margin-bottom: 5%;">
+              <div >
+                <div class="box-header">
+                   <h3>Synoptic info:</h3>
+                 </div>
+                 <div class="table-hover table-responsive">
+                    <table id="example1" class="table table-bordered" style="overflow: auto">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th>No.</th>
+                          <th>Date</th>
+                          <th>Time </th>
+                          <th>Unit of wind speed</th>
+                          <th>Block number</th>
+                          <th>Station name</th>
+                          <th>Station No</th>
+                          <th>Ommission of precipitation</th>
+                          <th>Type of station</th>
+                          <th>Height if lowest cloud</th>
+                          <th>Horizontal visibility</th>
+                          <th>Wind Direction</th>
+                          <th>Wind Speed</th>
+                          <th *ngIf="authority === 'Data Officer' || authority === 'Senior Data Officer'">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let synoptic of archivesynoptic  | paginate: { itemsPerPage: count, currentPage: p }">
+                          <td>{{synoptic.id}}</td>
+                          <td>{{synoptic.Date | slice:0:10}}</td>
+                          <td>{{synoptic.TIME}}</td>
+                          <td>{{synoptic.UWS}}</td>
+                          <td>{{synoptic.BN}}</td>
+                          <td>{{synoptic.station}}</td>
+                          <td>11223</td>
+                          <td>{{synoptic.IOOP}}</td>
+                          <td>{{synoptic.TSPPW}}</td>
+                          <td>{{synoptic.HLC}}</td>
+                          <td>{{synoptic.HV}}</td>
+                          <td>{{synoptic.WD}}</td>
+                          <td>{{synoptic.WS}}</td>
+                          <td *ngIf="authority === 'Data Officer' || authority === 'Senior Data Officer'">
+                            <button  type="button" class="btn btn-primary" name="button" (click)= "editsynoptic(synoptic.id)" ><i class="fa fa-edit"></i>Edit</button>
+                          </td>
+                         </tr>
+                      </tbody>
+  
+                    </table>
+                    
+                 </div>
+                 <div class="text-right">
+                  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </div>
+              </div>
+              </mat-card>
+              </div>
+        </div>
+  
+  

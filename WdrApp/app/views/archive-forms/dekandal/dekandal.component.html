@@ -1,0 +1,213 @@
+<div class="container">
+    <div class="row">
+      <mat-card style="margin-left: 8%; margin-bottom: 5%;">
+        <form (ngSubmit)="addDekandal()">
+            <!-- {{dekandal | json}} -->
+
+        <table class="table table-bordered table-stripped" >
+      <tr>
+        <td colspan = "4">
+            <div class="input-group " >
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Select Date</span>
+              </div>
+                <input type="date" name="Date" [(ngModel)]="dekandal.Date" required class="form-control" placeholder="Enter select date">
+              
+            </div>
+        </td>
+    
+      <td colspan = "4">
+          <div class="input-group ">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id ="basic-addon1">WIND DIRECTION 9:00AM</span>
+            </div>
+              <input type="text" name="WIND_DIRECTION_0600Z" [(ngModel)]="dekandal.WIND_DIRECTION_0600Z" required class="form-control"  placeholder="Enter WIND DIRECTION 9:00AM">
+            
+      </div>
+      </td>
+            </tr>
+            <tr>
+              <td colspan = "4" >
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Station Name</span>
+                    </div>
+                      <select type="text" name="station" [(ngModel)]="dekandal.station" required class="form-control" >
+                        <option>select station</option>
+                        <option value="kampala">kampala</option>
+                      </select>
+                    
+                  </div>
+              </td>
+    
+    <td colspan = "4">
+      <div class="input-group ">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id ="basic-addon1"> WIND SPEED 9:00AM</span>
+        </div>
+          <input type="text" name="WIND_SPEED_0600Z" [(ngModel)]="dekandal.WIND_SPEED_0600Z"  required class="form-control" placeholder="Enter WIND SPEED 9:00AM" >
+        
+      </div>
+        </td>
+        </tr>
+        <tr>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Station Number</span>
+                </div>
+                  <input type="text" name="stationnumber" required class="form-control compulsory" value="11223"  readonly >
+                
+              </div>
+          </td>
+    
+    <td colspan = "4">
+        <div class="input-group ">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id ="basic-addon1">RAINFALL</span>
+          </div>
+            <input type="text" name="RAINFALL_0600Z" [(ngModel)]="dekandal.RAINFALL_0600Z" required class="form-control" placeholder="Enter RAINFALL 9:00AM" >
+          
+      </div>
+          </td>
+          </tr>
+          <tr>
+            <td colspan = "4">
+                <div class="input-group " >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">MAX</span>
+                  </div>
+                 <input type="text" name="MAX_TEMP" [(ngModel)]="dekandal.MAX_TEMP" required class="form-control" placeholder="Enter MAX">
+                </div>
+            </td>
+    
+    <td colspan = "4">
+        <div class="input-group ">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id ="basic-addon1"> DRY BULB 3:00PM</span>
+          </div>
+            <input type="text" name="DRY_BULB_1200Z" [(ngModel)]="dekandal.DRY_BULB_1200Z" required class="form-control" placeholder="Enter DRY BULB 3:00PM" >
+          
+        </div>
+          </td>
+          </tr>
+          <tr>
+            <td colspan = "4">
+                <div class="input-group " >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">MIN</span>
+                  </div>
+                  <input type="text" name=" MIN_TEMP" [(ngModel)]="dekandal.MIN_TEMP" class="form-control" placeholder="Enter MIN">
+                </div>
+            </td>
+        
+            <td colspan = "4">
+            <div class="input-group ">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id ="basic-addon1">WET BULB 3:00PM</span>
+              </div>
+                <input type="text" name="WET_BULB_1200Z" [(ngModel)]="dekandal.WET_BULB_1200Z"  required class="form-control" placeholder="Enter WET BULB 3:00PM">
+              
+            </div>
+              </td>
+              </tr>
+              <tr>
+                <td colspan = "4">
+                    <div class="input-group " >
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">DRY BULB TIME 9:00AM</span>
+                      </div>
+                        <input type="text" name="DRY_BULB_0600Z" [(ngModel)]="dekandal.DRY_BULB_0600Z" required class="form-control" placeholder="Enter DRY BULB TIME 9:00am" >
+                      
+                    </div>
+                </td>
+    
+      <td colspan = "4">
+      <div class="input-group ">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id ="basic-addon1">DEW POINT 3:00PM</span>
+        </div>
+          <input type="text" name="DEW_POINT_1200Z" [(ngModel)]="dekandal.DEW_POINT_1200Z" required class="form-control" placeholder="DEW POINT 3:00PM" >
+        
+      </div>
+        </td>
+        </tr>
+        <tr>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">WET BULB TIME 9:00AM</span>
+                </div>
+                  <input type="text" name="WET_BULB_0600Z" [(ngModel)]="dekandal.WET_BULB_0600Z" required class="form-control" placeholder="Enter WET BULB TIME 9:00AM">
+                
+              </div>
+          </td>
+    
+            <td colspan = "4">
+                <div class="input-group ">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id ="basic-addon1">RELATIVE HUMIDITY 3:00PM</span>
+                  </div>
+                    <input type="text" name="RELATIVE_HUMIDITY_1200Z" [(ngModel)]="dekandal.RELATIVE_HUMIDITY_1200Z" required class="form-control" placeholder="Enter RELATIVE HUMIDITY 3:00PM">
+                  
+              </div>
+            </td>
+          </tr>
+          <tr>
+          <td colspan = "4">
+              <div class="input-group " >
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">DEW POINT TIME 9:00AM</span>
+                </div>
+                  <input type="text" name="DEW_POINT_0600Z" [(ngModel)]="dekandal.DEW_POINT_0600Z" required class="form-control" placeholder="Enter DEW POINT TIME 9:00AM">
+                
+              </div>
+          </td>
+    
+            <td colspan = "4">
+                <div class="input-group ">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id ="basic-addon1">WIND DIRECTION 3:00PM </span>
+                  </div>
+                    <input type="text" name="WIND_DIRECTION_1200Z" [(ngModel)]="dekandal.WIND_DIRECTION_1200Z" required class="form-control" placeholder="Enter WIND DIRECTION 3:00PM">
+                  
+              </div>
+            </td>
+          </tr>
+          <tr>
+              <td colspan = "4">
+                  <div class="input-group " >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">RELATIVE HUMIDITY 9:00AM</span>
+                    </div>
+                      <input type="text" name=" RELATIVE_HUMIDITY_0600Z" [(ngModel)]="dekandal.RELATIVE_HUMIDITY_0600Z" required class="form-control" placeholder="Enter RELATIVE HUMIDITY 9:00AM">
+                    
+                  </div>
+              </td>
+        
+                <td colspan = "4">
+                    <div class="input-group ">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id ="basic-addon1">WIND SPEED 3:00PM </span>
+                      </div>
+                        <input type="text" name="WIND_SPEED_1200Z" [(ngModel)]="dekandal.WIND_SPEED_1200Z"  required class="form-control" placeholder="Enter WIND SPEED 3:00PM">
+                      
+                  </div>
+                </td>
+          </tr>
+    </table>
+    <br />
+        <div class="input-group" >
+            <span class="btn btn-danger" (click)= "back()">
+                <i class ="fa fa-arrow-left"></i>
+                BACK
+            </span> 
+              <button type="submit" class="btn btn-primary" style=" margin-left:70% ;">
+                <i class="fa fa-plus"></i>
+                SUBMIT</button>
+         </div>
+        </form>
+        
+      </mat-card>
+    </div>
+    </div>
